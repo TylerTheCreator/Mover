@@ -11,7 +11,7 @@ Router.map(function() {
   this.route('post-a-move');
   this.route('sign-in');
   this.route('open-moves');
-  this.route('move-detail', {path: '/open-moves/:move_id'});
+  this.route('move-detail', {path: '/move-detail/:move_id'});
   this.route('user-profile');
   this.route('movers-list');
   this.route('mover-sign-up');

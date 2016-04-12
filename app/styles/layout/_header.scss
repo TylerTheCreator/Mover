@@ -44,7 +44,7 @@
     @extend %centered;
     color: $white;
     h2 {
-      @include fontFormat(60px, $white, $l-spacing: 3px);
+      @include fontFormat(45px, $white, $l-spacing: 3px);
       text-shadow: 1px 1px 1px $primaryBlue;
     }
     h3 {

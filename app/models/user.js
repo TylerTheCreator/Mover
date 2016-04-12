@@ -1,6 +1,6 @@
-import Model from 'ember-data/model';
+import DS from 'ember-data';
 
-export default Model.extend({
+export default DS.Model.extend({
   firstName: DS.attr(),
   lastName: DS.attr(),
   moves: DS.hasMany('move', {async: true})
