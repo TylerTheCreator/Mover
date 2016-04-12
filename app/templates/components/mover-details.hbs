@@ -1,62 +1,59 @@
 <div class="box-outline">
   <h3>Move Details</h3>
   <form>
-    <div class="row">
-      <div class="col-xs-8 col-md-4">
-        <!-- <h4>What do you need for your move?</h4> -->
-      </div>
-      <div class="col-xs-4 col-md-4">
-        <div class="form-group">
-          <label for="type">type</label>
-          {{input type="checkbox" name="truckNeeded" checked=truckNeeded}}
-        </div>
-        <div class="form-group">
-          <label for="itemsList">itemsList</label>
-          {{input type="checkbox" name="itemsList" checked=itemsList}}
-        </div>
-      </div>
-
+    <div class="form-group">
+      <label for="type">Type</label>
+      {{input value=type id="type"}}
     </div>
 
-    <h4>Items to Move</h4>
     <div class="form-group">
-          <label for="numberOfItems">numberOfItems</label>
-          {{input type="checkbox"id="numberOfItems" checked=numberOfItems}}
+      <label for="itemsList">Items List</label>
+      {{input value=itemsList id="itemsList"}}
+    </div>
+
+    <div class="form-group">
+      <label for="numberOfItems">numberOfItems</label>
+      {{input value=numberOfItems id="numberOfItems"}}
     </div>
 
     <div class="form-group">
       <label for="description">description</label>
-      {{input type="checkbox" id="description" checked=description}}
+      {{input value=description id="description"}}
+    </div>
+
+    <div class="form-group">
+      <label for="fragile">fragile</label>
+      {{input type="checkbox" id="fragile" checked=fragile class="toggle"}}
     </div>
 
     <div class="form-group">
       <label for="assembly">assembly</label>
-      {{input type="checkbox" id="assembly" checked=assembly}}
+      {{input type="checkbox" id="assembly" checked=assembly class="toggle"}}
     </div>
 
     <div class="form-group">
       <label for="stairs">stairs</label>
-      {{input type="checkbox" id="stairs" checked=stairs}}
+      {{input type="checkbox" id="stairs" checked=stairs class="toggle"}}
     </div>
 
     <div class="form-group">
       <label for="image">image</label>
-      {{input id="image"}}
+      {{input value=image id="image"}}
     </div>
 
     <div class="form-group">
       <label for="toAddress">toAddress</label>
-      {{input id="toAddress"}}
+      {{input value=toAddress id="toAddress"}}
     </div>
 
     <div class="form-group">
       <label for="fromAddress">fromAddress</label>
-      {{input id="fromAddress"}}
+      {{input value=fromAddress id="fromAddress"}}
     </div>
 
     <div class="form-group">
       <label for="date">date</label>
-      {{input id="date"}}
+      {{input value=date id="date"}}
     </div>
     <button {{action 'save'}}>Post Move</button>
   </form>

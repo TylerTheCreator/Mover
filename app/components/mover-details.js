@@ -8,6 +8,7 @@ export default Ember.Component.extend({
         itemsList: this.get('itemsList'),
         numberOfItems: this.get('numberOfItems'),
         description: this.get('description'),
+        fragile: this.get('fragile'),
         assembly: this.get('assembly'),
         stairs: this.get('stairs'),
         image: this.get('image'),
