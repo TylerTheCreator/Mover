@@ -2,9 +2,6 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 
-
-
-
 .homepageHeader {
   @extend %centered;
   @include flexbox($align-items: flex-end);
