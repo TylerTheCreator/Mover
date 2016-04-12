@@ -1,1 +1,22 @@
-{{outlet}}
+<div class="moveDetailHeader">
+  <div class="container">
+    <h2>Details on User{{model.user}}'s Move on {{model.date}}</h2>
+    <h3>From {{model.fromAddress}}<br> to {{model.toAddress}}</h3>
+  </div>
+</div>
+<div class="container">
+  <div class="moveDetails">
+    <button id="bidMove">Bid on this Move</button>
+    <div class="moveImage" style="background: url('{{model.image}}') center center no-repeat; background-size: contain;"></div>
+    <h3 class='type'>Move Type:{{model.type}}</h3>
+    <h4>List of Items:</h4>
+    <p>{{model.itemsList}}</p>
+    <p class="stairs">Stairs {{stairs-icon model}}</p>
+    <p class="assembly">Assembly {{assembly-icon model}}</p>
+    <h4>Description</h4>
+    <p>{{model.description}}</p>
+  </div>
+  <div class="map">
+    <!-- Get whatever tyler is coding for this -->
+  </div>
+</div>

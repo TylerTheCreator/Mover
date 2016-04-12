@@ -1,0 +1,10 @@
+
+
+.moveDetails {
+  margin: 5% auto;
+  @include flexbox($direction: column);
+  .moveImage {
+    height: 40vh;
+    margin-top: 4%;
+  }
+}
