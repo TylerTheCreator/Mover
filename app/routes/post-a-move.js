@@ -6,7 +6,7 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    save(params) {
+    save3(params) {
       var newMove = this.store.createRecord('move', params);
       newMove.save();
       this.transitionTo('post-a-move');
