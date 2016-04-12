@@ -36,8 +36,10 @@
     background-size: 100%;
     background-repeat: no-repeat;
     @include flexbox($justify: center, $align-items: center);
-    @include fontFormat(25px, $white, lighter, 3px);
     transition: all 300ms linear;
+    a {
+      @include fontFormat(25px, $white, lighter, 3px);
+    }
     &:hover {
       transition: all 300ms linear;
       background-size: 120%
