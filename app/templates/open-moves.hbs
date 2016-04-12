@@ -6,5 +6,15 @@
     </div>
   </div>
 </div>
-
-{{move-tile move=model}}
+<div class="container">
+  <div class="moveListHeader">
+    <p>Move Type</p>
+    <p>Date</p>
+    <p>Locations</p>
+  </div>
+  <div class="moveList">
+    {{#each model as |move|}}
+    {{move-tile move=move}}
+    {{/each}}
+  </div>
+</div>
