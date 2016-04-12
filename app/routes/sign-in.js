@@ -43,7 +43,7 @@ export default Ember.Route.extend({
            });
              user.save()
              .then(function(){
-               _this.transitionTo('protected');
+               _this.transitionTo('post-a-move');
            });
            });
          }
