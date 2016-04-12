@@ -6,16 +6,17 @@ export default Ember.Route.extend({
          var controller = this.get('controller');
          var email = controller.get('userEmail');
          var password = controller.get('userPassword');
-           this.get('session').authenticate('authenticator:firebase', {
-               'email': email,
-               'password': password
+           this.get('session').open('firebase', {
+                provider: 'password',
+                email: email,
+                password: password
            }).then(function() {
                this.transitionTo('protected');
            }.bind(this));
        },
        logout: function() {
-           this.get('session').invalidate().then(function() {
-               this.transitionTo('sign-in');
+           this.get('session').close().then(function() {
+               this.transitionTo('application');
            }.bind(this));
        }
    }
