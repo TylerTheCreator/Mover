@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.homepageHeader {
+  @extend %centered;
+  @include flexbox($align-items: flex-end);
+  @include background-image(linear-gradient(rgba($primaryBlue, 0),
+  rgba($primaryBlue, 0.6)),url("#{$img-path}/vdub-van.jpeg"));
+  background-size: cover;
+  height: 70vh;
+  h1 {
+    margin-bottom: 8%;
+    @include fontFormat(30px, $white, lighter, 1px);
+  }
+}

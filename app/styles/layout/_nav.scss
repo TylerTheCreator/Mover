@@ -1,0 +1,19 @@
+.navWrapper  {
+  .headerText {
+    @extend %centered;
+    h1 {
+      margin-bottom: 5px;
+      margin-top: 0;
+      padding-top: 15px;
+      @include fontFormat(40px, $primaryBlue, $l-spacing: 3px);
+      font-family: 'dayposter';
+      // font-family: 'blackout';
+      // font-family: 'Candal', sans-serif;
+    }
+  }
+}
+
+.nav {
+  @include flexbox($justify: space-around, $align-items: center);
+  margin: 1%;
+}

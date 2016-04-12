@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+  @extend %centered;
+  text-transform: uppercase;
+  @include fontFormat(12px, $weight: lighter, $l-spacing: 1px);
+  margin: 4%;
+  hr {
+    width: 60%;
+    margin-bottom: 2%;
+  }
+}
