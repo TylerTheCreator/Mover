@@ -14,3 +14,22 @@
     @include fontFormat(30px, $white, lighter, 1px);
   }
 }
+
+.openMovesHeader {
+  @extend %centered;
+  @include flexbox($align-items: center);
+  @include background-image(linear-gradient(rgba($primaryBlue, 0),
+  rgba($primaryBlue, 0.6)),url("#{$img-path}/mover.jpg"));
+  background-size: cover;
+  // background-position: bottom;
+  height: 35vh;
+  .headerText {
+    h1 {
+      @include fontFormat(60px, $white, $l-spacing: 3px);
+      text-shadow: 1px 1px 1px $primaryBlue;
+    }
+    h3 {
+      @include fontFormat(24px, $white, lighter, $l-spacing: 3px);
+    }
+  }
+}
