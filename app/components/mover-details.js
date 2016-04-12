@@ -1,5 +1,7 @@
 import Ember from 'ember';
 
+
+
 export default Ember.Component.extend({
   actions: {
     save() {
@@ -16,7 +18,7 @@ export default Ember.Component.extend({
         fromAddress: this.get('fromAddress'),
         date: this.get('date'),
       };
-      this.sendAction('save', params);
+      this.sendAction('save2', params);
     }
   }
 });
