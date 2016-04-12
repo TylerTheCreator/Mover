@@ -6,19 +6,22 @@
     &:first-child {
       width: 20px;
       animation-delay: 5s;
-      -webkit-animation: rock-smoke1 3s infinite;
+      -webkit-animation: rock-smoke1 3s;
+      -webkit-animation-iteration-count: 3;
       opacity: 0;
     }
     &:nth-child(2) {
       width: 30px;
       animation-delay: 5s;
-      -webkit-animation: rock-smoke2 3s infinite;
+      -webkit-animation: rock-smoke2 3s;
+      -webkit-animation-iteration-count: 3;
       opacity: 0;
     }
     &:nth-child(3) {
       width: 35px;
       animation-delay: 5s;
-      -webkit-animation: rock-smoke3 3s infinite;
+      -webkit-animation: rock-smoke3 3s;
+      -webkit-animation-iteration-count: 3;
       opacity: 0;
 
     }
