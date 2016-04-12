@@ -1,0 +1,13 @@
+.navWrapper  {
+  .headerText {
+    @extend %centered;
+    h1 {
+      margin-bottom: 3px;
+      @include fontFormat(40px, $primaryBlue, $l-spacing: 3px);
+    }
+  }
+}
+
+.nav {
+  @include flexbox($justify: space-around, $align-items: center);
+}
