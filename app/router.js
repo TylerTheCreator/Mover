@@ -8,7 +8,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('about');
   this.route('contact');
-  this.route('post-a-home');
+  this.route('post-a-move');
   this.route('sign-up');
   this.route('sign-in');
   this.route('open-moves');
