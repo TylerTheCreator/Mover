@@ -5,3 +5,13 @@
  body {
    @extend %bodyFont;
  }
+
+ @font-face {
+   src: url("#{$font-path}blackout.ttf");
+   font-family: 'blackout';
+ }
+
+@font-face {
+  src: url("#{$font-path}dayposter.ttf");
+  font-family: 'dayposter';
+}

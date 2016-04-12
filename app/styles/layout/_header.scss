@@ -7,13 +7,13 @@
 
 .homepageHeader {
   @extend %centered;
-  @include flexbox($align-items: flex-start);
-  @include background-image(linear-gradient(rgba($primaryBlue, 0.6),
-  rgba($primaryBlue, 0)),url("#{$img-path}/vdub-van.jpeg"));
+  @include flexbox($align-items: flex-end);
+  @include background-image(linear-gradient(rgba($primaryBlue, 0),
+  rgba($primaryBlue, 0.6)),url("#{$img-path}/vdub-van.jpeg"));
   background-size: cover;
   height: 70vh;
   h1 {
-    margin-top: 8%;
+    margin-bottom: 8%;
     @include fontFormat(30px, $white, lighter, 1px);
   }
 }

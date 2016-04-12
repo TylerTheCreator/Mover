@@ -2,7 +2,9 @@
   @extend %container;
 }
 
-// .pageWrapper {
-//   @include flexbox($justify: space-between, $direction: column);
-//   height: 100vh;
-// }
+.pageWrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  // background: rgba($background, 0.5);
+  height: 100vh;
+}
