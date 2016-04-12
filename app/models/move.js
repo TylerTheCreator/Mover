@@ -11,5 +11,6 @@ export default Model.extend({
   image: DS.attr(),
   toAddress: DS.attr(),
   fromAddress: DS.attr(),
-  date: DS.attr()
+  date: DS.attr(),
+  user: DS.belongsTo('user', { async: true});
 });

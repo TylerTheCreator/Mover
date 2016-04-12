@@ -1,1 +1,20 @@
-{{outlet}}
+<div class="moveDetailHeader">
+  <div class="container">
+    <h2>Details on User{{model.user}}'s Move on 04/19/2016 at 9 AM{{model.date}}</h2>
+    <h3>From Filler Address1{{model.fromAddress}} to Filler Address2{{model.toAddress}}</h3>
+  </div>
+</div>
+<div class="moveDetails">
+  <div class="container">
+    <button id="bidMove">Bid on this Move</button>
+    <img src="{{model.image}}" alt="" />
+    <h3 class='type'>Move Type:{{model.type}}</h3>
+    <h4>List of Items:</h4>
+    <p>{{model.itemsList}}</p>
+    <h4>Description</h4>
+    <p>{{model.description}}</p>
+  </div>
+</div>
+
+
+<!-- remember to add path to move_id to router after finishing -->

@@ -1,0 +1,16 @@
+.moveDetailHeader {
+  height: 40vh;
+  @include background-image(linear-gradient(rgba($primaryBlue, 0.3),
+  rgba($primaryBlue, 0.3)),url("#{$img-path}/city.jpeg"));
+  background-position: bottom;
+  background-size: cover;
+  @include flexbox($align-items: center);
+  @extend %centered;
+  color: $white;
+  h2 {
+    @include fontFormat(35px, $l-spacing: 1px);
+  }
+  h3 {
+    @include fontFormat(25px);
+  }
+}

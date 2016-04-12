@@ -18,3 +18,6 @@ Router.map(function() {
 });
 
 export default Router;
+
+//
+// this.route('move-detail', {path: '/open-moves/:move_id'});
