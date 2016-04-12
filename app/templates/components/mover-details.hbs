@@ -1,0 +1,60 @@
+<div class="box-outline">
+  <h3>Move Details</h3>
+  <form>
+    <div class="form-group">
+      <label for="type">Type</label>
+      {{input value=type id="type"}}
+    </div>
+
+    <div class="form-group">
+      <label for="itemsList">Items List</label>
+      {{input value=itemsList id="itemsList"}}
+    </div>
+
+    <div class="form-group">
+      <label for="numberOfItems">numberOfItems</label>
+      {{input value=numberOfItems id="numberOfItems"}}
+    </div>
+
+    <div class="form-group">
+      <label for="description">description</label>
+      {{input value=description id="description"}}
+    </div>
+
+    <div class="form-group">
+      <label for="fragile">fragile</label>
+      {{input type="checkbox" id="fragile" checked=fragile class="toggle"}}
+    </div>
+
+    <div class="form-group">
+      <label for="assembly">assembly</label>
+      {{input type="checkbox" id="assembly" checked=assembly class="toggle"}}
+    </div>
+
+    <div class="form-group">
+      <label for="stairs">stairs</label>
+      {{input type="checkbox" id="stairs" checked=stairs class="toggle"}}
+    </div>
+
+    <div class="form-group">
+      <label for="image">image</label>
+      {{input value=image id="image"}}
+    </div>
+
+    <div class="form-group">
+      <label for="toAddress">toAddress</label>
+      {{input value=toAddress id="toAddress"}}
+    </div>
+
+    <div class="form-group">
+      <label for="fromAddress">fromAddress</label>
+      {{input value=fromAddress id="fromAddress"}}
+    </div>
+
+    <div class="form-group">
+      <label for="date">date</label>
+      {{input value=date id="date"}}
+    </div>
+    <button {{action 'save'}}>Post Move</button>
+  </form>
+</div>
