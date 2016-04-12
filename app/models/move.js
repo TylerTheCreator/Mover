@@ -1,6 +1,5 @@
 import DS from 'ember-data';
 
-
 export default DS.Model.extend({
   type: DS.attr(),
   itemsList: DS.attr(),
@@ -12,5 +11,6 @@ export default DS.Model.extend({
   image: DS.attr(),
   toAddress: DS.attr(),
   fromAddress: DS.attr(),
-  date: DS.attr()
+  date: DS.attr(),
+  // user: DS.belongsTo('user', { async: true});
 });
