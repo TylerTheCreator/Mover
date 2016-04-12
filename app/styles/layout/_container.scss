@@ -1,0 +1,10 @@
+.container {
+  @extend %container;
+}
+
+.pageWrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  // background: rgba($background, 0.5);
+  height: 100vh;
+}
