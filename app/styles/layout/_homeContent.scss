@@ -24,3 +24,32 @@
     padding: 3%;
   }
 }
+
+// Homepage Banner
+
+.homepageBanner {
+  @include flexbox();
+  height: 25vh;
+  margin-top: 7%;
+  .item {
+    flex: 1;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    @include flexbox($justify: center, $align-items: center);
+    @include fontFormat(25px, $white, lighter, 3px);
+    transition: all 300ms linear;
+    &:hover {
+      transition: all 300ms linear;
+      background-size: 120%
+    }
+  }
+  .postMove {
+    @include background-image(linear-gradient(rgba($primaryBlue, 0.3),
+    rgba($primaryBlue, 0.3)),url("#{$img-path}/empty.jpg"));
+    background-position: bottom;
+  }
+  .viewMoves {
+    @include background-image(linear-gradient(rgba($primaryBlue, 0.3),
+    rgba($primaryBlue, 0.3)),url("#{$img-path}/mover.jpg"));
+  }
+}
