@@ -15,7 +15,7 @@ export default Ember.Route.extend({
        },
        logout: function() {
            this.get('session').invalidate().then(function() {
-               this.transitionTo('application');
+               this.transitionTo('sign-in');
            }.bind(this));
        }
    }
