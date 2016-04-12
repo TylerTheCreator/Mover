@@ -1,0 +1,49 @@
+// Homepage Animation
+
+.headerText {
+  margin-left: 10%;
+  img {
+    &:first-child {
+      width: 20px;
+      animation-delay: 5s;
+      -webkit-animation: rock-smoke1 3s;
+      -webkit-animation-iteration-count: 3;
+      opacity: 0;
+    }
+    &:nth-child(2) {
+      width: 30px;
+      animation-delay: 5s;
+      -webkit-animation: rock-smoke2 3s;
+      -webkit-animation-iteration-count: 3;
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      width: 35px;
+      animation-delay: 5s;
+      -webkit-animation: rock-smoke3 3s;
+      -webkit-animation-iteration-count: 3;
+      opacity: 0;
+
+    }
+  }
+}
+
+// Keyframes
+
+@-webkit-keyframes rock-smoke1 {
+  10% { opacity: 1; }
+  30% { -webkit-transform: translateY(-5px) rotate(-20deg); }
+  30% { opacity: 0; }
+}
+
+@-webkit-keyframes rock-smoke2 {
+  30% { opacity: 1; }
+  40% { -webkit-transform: translateY(-5px) rotate(-20deg); }
+  60% { opacity: 0; }
+}
+
+@-webkit-keyframes rock-smoke3 {
+  60% { opacity: 1; }
+  50% { -webkit-transform: translateY(-5px) rotate(-20deg); }
+  80% { opacity: 0; }
+}

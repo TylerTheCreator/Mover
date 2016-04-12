@@ -1,1 +1,20 @@
-{{outlet}}
+<div class="openMovesHeader">
+  <div class="container">
+    <div class="headerText">
+      <h1>Open Moves</h1>
+      <h3>View move details, and put out a bid for jobs you'd like to do.</h3>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="moveListHeader">
+    <p>Move Type</p>
+    <p>Date</p>
+    <p>Locations</p>
+  </div>
+  <div class="moveList">
+    {{#each model as |move|}}
+    {{move-tile move=move}}
+    {{/each}}
+  </div>
+</div>
