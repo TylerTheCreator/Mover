@@ -7,13 +7,21 @@
       padding-top: 15px;
       @include fontFormat(40px, $primaryBlue, $l-spacing: 3px);
       font-family: 'dayposter';
-      // font-family: 'blackout';
-      // font-family: 'Candal', sans-serif;
     }
   }
-}
-
-.nav {
-  @include flexbox($justify: space-around, $align-items: center);
-  margin: 1%;
+  .nav {
+    @include flexbox($justify: space-around, $align-items: center);
+    margin: 2%;
+    p {
+      margin: 15px 0 8px 0;
+    }
+    a {
+      border-bottom: 2px solid transparent;
+      transition: all 300ms ease-in-out;
+      &:hover {
+        transition: all 300ms ease-in-out;
+        border-bottom: 2px solid $secondaryBlue;
+      }
+    }
+  }
 }
