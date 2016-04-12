@@ -12,5 +12,5 @@ export default Model.extend({
   toAddress: DS.attr(),
   fromAddress: DS.attr(),
   date: DS.attr(),
-  user: DS.belongsTo('user', { async: true});
+  // user: DS.belongsTo('user', { async: true});
 });

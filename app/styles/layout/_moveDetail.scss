@@ -1,5 +1,5 @@
 .moveDetailHeader {
-  height: 40vh;
+  height: 35vh;
   @include background-image(linear-gradient(rgba($primaryBlue, 0.3),
   rgba($primaryBlue, 0.3)),url("#{$img-path}/city.jpeg"));
   background-position: bottom;
@@ -13,4 +13,9 @@
   h3 {
     @include fontFormat(25px);
   }
+}
+
+.moveDetails {
+  margin: 5% auto;
+  @include flexbox($direction: column);
 }
