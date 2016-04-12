@@ -1,4 +1,5 @@
 import Ember from 'ember';
+ import Firebase from 'firebase';
 
 export default Ember.Route.extend({
   actions: {
@@ -14,7 +15,7 @@ export default Ember.Route.extend({
             this.transitionTo('post-a-move');
         }.bind(this));
     },
-           signUp: function(){
+          signUp: function(){
          var controller = this.get('controller');
          var firstName = controller.get('firstName');
          var lastName = controller.get('lastName');
@@ -49,5 +50,5 @@ export default Ember.Route.extend({
        });
      }  
   }
-})
+});
 
