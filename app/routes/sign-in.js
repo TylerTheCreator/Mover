@@ -49,7 +49,7 @@ export default Ember.Route.extend({
            });
              user.save()
              .then(function(){
-               _this.transitionTo('post-a-move');
+               _this.transitionTo('/');
            });
            });
          }
