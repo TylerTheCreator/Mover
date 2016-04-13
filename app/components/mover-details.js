@@ -18,6 +18,8 @@ export default Ember.Component.extend({
         fromAddress: this.get('fromAddress') ? this.get('type'):"",
         date: this.get('date') ? this.get('type'):"",
         user: this.get('user')
+        latitude: this.get('latitude'),
+        longitude: this.get('longitude'),
       };
       this.sendAction('save2', params);
     }
