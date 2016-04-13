@@ -22,7 +22,7 @@
         {{else}}
           {{#link-to 'sign-in'}}<p>Sign In</p>{{/link-to}}
         {{/if}}
-
+        
         {{#link-to 'mover-sign-up'}}<span><p>Become a Mover</p></span>{{/link-to}}
         {{#if session.isAuthenticated}}
             <p><a href=""{{action 'logout'}}>Sign Out</a></p>
