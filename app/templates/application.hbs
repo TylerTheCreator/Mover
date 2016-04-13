@@ -37,15 +37,12 @@
         {{/if}}
       </div>
     </div>
+
     {{#if session.isAuthenticated}}
 
-    Hello {{session.currentUser.name}}!
 
     {{#link-to 'user-profile' session.uid}} Go to your private page. {{/link-to}}
     {{/if}}
-
-    <p><a href=""></a></p>
-    {{session.currentUser.name}}
 
     {{outlet}}
   <div class="footer">
