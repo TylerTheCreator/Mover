@@ -15,16 +15,11 @@
         {{#if session.isAuthenticated}}
             <button {{action 'logout'}}>Logout</button>
         {{/if}}
-        {{#if session.isUnAuthenticated}}
-             {{#link-to 'sign-in'}}<p>Sign In</p>{{/link-to}}         
-        {{/if}}
-        
       </div>
     </div>
     {{#link-to 'about' session.uid}} Go to your private page. {{/link-to}}
      Hello {{model.lastName}}
     {{outlet}}
-
 
   <div class="footer">
     <hr>
