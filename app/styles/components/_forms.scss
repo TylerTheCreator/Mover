@@ -1,13 +1,21 @@
 .bidFormSection {
-  @include flexbox();
+  margin: 2% 0;
+  @include flexbox($direction: column);
   width: 100%;
   form {
-    width: 100%;
-    // @include flexbox($direction: column);
+    @include flexbox($justify: center, $direction: column, $align-items: center);
+    width: 50%;
     input {
-      // margin-right: 2%;
+      width: 100%;
+      height: 50px;
+      font-size: 16px;
+      @extend %bodyFont;
+      letter-spacing: 1px;
+      padding-left: 2%;
     }
     button {
+      margin: 2% auto 2% auto;
+      display: block;
       padding: 5px 20px;
     }
   }
@@ -27,21 +35,124 @@
     background-color: rgba($white, 0.7);
     padding: 5%;
     @include flexbox($justify: space-between, $direction: column);
-    height: 55%;
+    height: 600px;
     border-radius: 5px;
-    min-height: 500px;
   }
   input {
     width: 100%;
-    height: 4vh;
-    min-height: 20px;
+    height: 50px;
     font-size: 16px;
     @extend %bodyFont;
     letter-spacing: 1px;
     padding-left: 5%;
   }
   button {
-    margin: 2% auto 0 auto;
+    margin: 2% auto 2% auto;
     display: block;
+  }
+  .signUp {
+    text-align: center;
+    color: $primaryBlue;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+}
+
+.postMoveContainer{
+  background-color: rgba($primaryBlue, 0.1);
+  padding: 2%;
+  color: $primaryBlue;
+  h1, h3 {
+    text-align: center;
+    max-width: 700px;
+    margin: 20px auto;
+  }
+}
+
+.postMoveForm {
+  max-width: 900px;
+  margin: 0 auto;
+  .form-group {
+    @include flexbox($direction: column);
+    input {
+      height: 40px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      @extend %bodyFont;
+      letter-spacing: 1px;
+      padding-left: 10px;
+    }
+    label {
+      margin-bottom: 5px;
+    }
+  }
+  .checkboxes {
+    padding: 15px 0;
+    @include flexbox($justify: space-between);
+  }
+  .longLat {
+    @include flexbox($justify: space-between);
+    .form-group {
+      flex: 1;
+      &:first-child{
+        margin-right: 5px;
+      }
+    }
+  }
+  button {
+    display: block;
+    margin: 3% auto;
+  }
+}
+
+.checkboxContainer {
+  background-color: rgba($primaryBlue, 0.7);
+  @include fontFormat($color: $white, $l-spacing: 1px);
+  padding: 2% 10%;
+  p {
+    @extend %centered;
+  }
+  hr {
+    border: 1px solid $white;
+  }
+}
+
+.applyContainer {
+  h1 {
+    @include fontFormat(50px, $color: $white, $l-spacing: 1px, $l-height: 100px);
+    @extend %centered;
+    text-shadow: 2px 2px 2px $primaryBlue;
+  }
+  @include background-image(linear-gradient(rgba($primaryBlue, 0.6),
+  rgba($primaryBlue, 0.6)),url("#{$img-path}/work-girl.jpg"));
+  height: 80vh;
+  background-size: cover;
+  @include flexbox($justify: center, $direction: column, $align-items: center);
+  .forms {
+    width: 40%;
+    background-color: rgba($white, 0.7);
+    padding: 3%;
+    @include flexbox($justify: space-between, $direction: column);
+    height: 630px;
+    border-radius: 5px;
+  }
+  input {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    @extend %bodyFont;
+    letter-spacing: 1px;
+    padding-left: 5%;
+    margin: 5px 0 10px 0;
+  }
+  button {
+    margin: 2% auto 2% auto;
+    display: block;
+  }
+  .signUp {
+    text-align: center;
+    color: $primaryBlue;
+    font-weight: bold;
+    letter-spacing: 1px;
   }
 }

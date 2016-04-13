@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('user-profile', {path: '/user-profile/:user_id'});
   this.route('movers-list');
   this.route('mover-sign-up');
+  this.route('apply-thank-you');
 });
 
 export default Router;

@@ -12,10 +12,9 @@
   .nav {
     @include flexbox($justify: space-around, $align-items: center);
     margin: 2%;
-    p {
-      margin: 15px 0 8px 0;
-    }
     a {
+      margin: 15px 0 8px 0;
+      padding-bottom: 5px;
       border-bottom: 2px solid transparent;
       transition: all 300ms ease-in-out;
       &:hover {
@@ -24,4 +23,18 @@
       }
     }
   }
+}
+
+.profileNav {
+  @include flexbox($align-items: center);
+  img {
+    width: 35px;
+    margin-left: 12px;
+    border-radius: 100%;
+  }
+  // a:last-child {
+  //   &:hover {
+  //     border-bottom: none;
+  //   }
+  // }
 }
