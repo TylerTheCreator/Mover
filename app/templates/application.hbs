@@ -11,27 +11,31 @@
       <div class="nav">
 
         {{#if session.isAuthenticated}}
-          {{#link-to 'post-a-move' session.uid}}<p>Post a Move</p>{{/link-to}}
+          {{#link-to 'post-a-move' session.uid}}Post a Move{{/link-to}}
         {{else}}
-          {{#link-to 'sign-in'}}<p>Post a Move</p>{{/link-to}}
+          {{#link-to 'sign-in'}}Post a Move{{/link-to}}
         {{/if}}
 
-        {{#link-to 'about'}}<p>About</p>{{/link-to}}
+        {{#link-to 'about'}}About{{/link-to}}
 
-        {{#if session.isAuthenticated}}
+        <!-- {{#if session.isAuthenticated}}
         {{else}}
           {{#link-to 'sign-in'}}<p>Sign In</p>{{/link-to}}
-        {{/if}}
+        {{/if}} -->
 
-        {{#link-to 'mover-sign-up'}}<span><p>Become a Mover</p></span>{{/link-to}}
+        {{#link-to 'mover-sign-up'}}<span>Become a Mover</span>{{/link-to}}
         {{#if session.isAuthenticated}}
-            <p><a href=""{{action 'logout'}}>Sign Out</a></p>
-               <div class='panel panel-default'>
+            <a href=""{{action 'logout'}}>Sign Out</a>
+            <div class="profileNav">
+              {{#link-to 'user-profile' session.uid}} Your Profile{{/link-to}}
+              <img src='{{session.currentUser.profileImageURL}}'/>
+            </div>
+               <!-- <div class='panel panel-default'>
                 <div class='panel-heading'>{{session.currentUser.email}}</div>
                 <div class='panel-body'>
                   <img src='{{session.currentUser.profileImageURL}}' />
                 </div>
-                </div>
+                </div> -->
         {{else}}
         {{#link-to 'sign-in'}}<p>Sign In</p>{{/link-to}}
         {{/if}}
@@ -41,8 +45,8 @@
     {{#if session.isAuthenticated}}
 
 
-    {{#link-to 'user-profile' session.uid}} Go to your private page. {{/link-to}}
-    {{/if}}
+    <!-- {{#link-to 'user-profile' session.uid}} Go to your private page. {{/link-to}}
+    {{/if}} -->
 
     {{outlet}}
   <div class="footer">
