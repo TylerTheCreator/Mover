@@ -1,0 +1,16 @@
+{{#if biddingOnMove}}
+<div class="bidFormSection">
+  <form class="bid">
+    <label for="bid">Your bid for this move</label>
+    {{input value=bid id="bid"}}
+    <label for="name">Your name</label>
+    {{input value=name id="name" required='required'}}
+    <label for="email">Email</label>
+    {{input value=email id="email"}}
+    <button {{action 'saveBid'}}>Post Bid</button>
+  </form>
+  <button class="secondaryButton"{{action 'toggleDetail'}}>Cancel</button>
+</div>
+{{else}}
+  <button id="bidMove" {{action 'toggleDetail'}}>Bid on this Move</button>
+{{/if}}
