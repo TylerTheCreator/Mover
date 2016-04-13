@@ -15,11 +15,14 @@
         {{else}}
           {{#link-to 'sign-in'}}<p>Post a Move</p>{{/link-to}}
         {{/if}}
+
         {{#link-to 'about'}}<p>About</p>{{/link-to}}
+
         {{#if session.isAuthenticated}}
         {{else}}
           {{#link-to 'sign-in'}}<p>Sign In</p>{{/link-to}}
         {{/if}}
+
         {{#link-to 'mover-sign-up'}}<span><p>Become a Mover</p></span>{{/link-to}}
         {{#if session.isAuthenticated}}
             <p><a href=""{{action 'logout'}}>Sign Out</a></p>
@@ -35,7 +38,9 @@
       </div>
     </div>
     {{#if session.isAuthenticated}}
+
     Hello {{session.currentUser.name}}!
+
     {{#link-to 'user-profile' session.uid}} Go to your private page. {{/link-to}}
     {{/if}}
 
