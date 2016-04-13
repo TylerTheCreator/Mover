@@ -13,11 +13,14 @@
         {{#link-to 'about'}}<p>About</p>{{/link-to}}
         {{#link-to 'sign-in'}}<p>Sign In</p>{{/link-to}}
         {{#link-to 'mover-sign-up'}}<span><p>Become a Mover</p></span>{{/link-to}}
+        {{#if session.isAuthenticated}}
+            <!--Hello {{model.lastName}}-->
+            <button {{action 'logout'}}>Logout</button>
+        {{/if}}
       </div>
     </div>
 
     {{outlet}}
-
 
 
   <div class="footer">

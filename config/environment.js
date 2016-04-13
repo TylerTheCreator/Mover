@@ -5,7 +5,14 @@ module.exports = function(environment) {
     modulePrefix: 'mover',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
+<<<<<<< HEAD
+    firebase: 'https://mover-app.firebaseio.com/',
+    torii: {
+      sessionServiceName: 'session'
+    },
+=======
     firebase: 'https://mover-app.firebaseIO.com/',
+>>>>>>> master
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
