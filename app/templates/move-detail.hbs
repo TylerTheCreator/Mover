@@ -19,6 +19,7 @@
   <div class="map">
     <!-- Get whatever tyler is coding for this -->
   </div>
+  {{#each model.bids as |bid|}}
+    {{bid-tile bid=bid}}
+  {{/each}}
 </div>
-
-{{ log model }}
