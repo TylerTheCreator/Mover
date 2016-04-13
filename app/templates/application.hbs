@@ -9,16 +9,24 @@
         </h1>{{/link-to}}
       </div>
       <div class="nav">
-{{#if session.isAuthenticated}}
-{{#link-to 'post-a-move' session.uid}}<p>Post a Move</p>{{/link-to}}
-{{else}}
-{{#link-to 'sign-in'}}<p>Post a Move</p>{{/link-to}}
-{{/if}}      
+
+        {{#if session.isAuthenticated}}
+          {{#link-to 'post-a-move' session.uid}}<p>Post a Move</p>{{/link-to}}
+        {{else}}
+          {{#link-to 'sign-in'}}<p>Post a Move</p>{{/link-to}}
+        {{/if}}
+
         {{#link-to 'about'}}<p>About</p>{{/link-to}}
+
+        {{#if session.isAuthenticated}}
+        {{else}}
+          {{#link-to 'sign-in'}}<p>Sign In</p>{{/link-to}}
+        {{/if}}
+
         {{#link-to 'mover-sign-up'}}<span><p>Become a Mover</p></span>{{/link-to}}
         {{#if session.isAuthenticated}}
             <p><a href=""{{action 'logout'}}>Sign Out</a></p>
-               <div class='panel panel-default'>  
+               <div class='panel panel-default'>
                 <div class='panel-heading'>{{session.currentUser.email}}</div>
                 <div class='panel-body'>
                   <img src='{{session.currentUser.profileImageURL}}' />
@@ -29,9 +37,16 @@
         {{/if}}
       </div>
     </div>
-    {{#link-to 'about' session.uid}} Go to your private page. {{/link-to}}
+    {{#if session.isAuthenticated}}
+
+    Hello {{session.currentUser.name}}!
+
+    {{#link-to 'user-profile' session.uid}} Go to your private page. {{/link-to}}
+    {{/if}}
+
     <p><a href=""></a></p>
     {{session.currentUser.name}}
+
     {{outlet}}
   <div class="footer">
     <hr>
