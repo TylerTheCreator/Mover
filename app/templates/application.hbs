@@ -18,34 +18,31 @@
 
         {{#link-to 'about'}}<p>About</p>{{/link-to}}
 
-        {{#if session.isAuthenticated}}
-        {{else}}
-          {{#link-to 'sign-in'}}<p>Sign In</p>{{/link-to}}
-        {{/if}}
 
         {{#link-to 'mover-sign-up'}}<span><p>Become a Mover</p></span>{{/link-to}}
         {{#if session.isAuthenticated}}
             <p><a href=""{{action 'logout'}}>Sign Out</a></p>
-               <div class='panel panel-default'>
+               <div class='panel panel-default'>{{#link-to 'user-profile' session.uid}}
                 <div class='panel-heading'>{{session.currentUser.email}}</div>
                 <div class='panel-body'>
                   <img src='{{session.currentUser.profileImageURL}}' />
-                </div>
+                </div>{{/link-to}}
                 </div>
         {{else}}
         {{#link-to 'sign-in'}}<p>Sign In</p>{{/link-to}}
         {{/if}}
       </div>
     </div>
+
     {{#if session.isAuthenticated}}
 
-    Hello {{session.currentUser.name}}!
+    Hey {{session.currentUser.firstName}}!
 
     {{#link-to 'user-profile' session.uid}} Go to your private page. {{/link-to}}
     {{/if}}
 
-    <p><a href=""></a></p>
-    {{session.currentUser.name}}
+    <!-- <p><a href=""></a></p>
+    {{session.currentUser.name}} -->
 
     {{outlet}}
   <div class="footer">
