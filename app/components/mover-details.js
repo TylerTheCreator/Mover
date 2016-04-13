@@ -17,7 +17,7 @@ export default Ember.Component.extend({
         toAddress: this.get('toAddress') ? this.get('type'):"",
         fromAddress: this.get('fromAddress') ? this.get('type'):"",
         date: this.get('date') ? this.get('type'):"",
-        user: this.get('user')
+        user: this.get('user'),
         latitude: this.get('latitude'),
         longitude: this.get('longitude'),
       };
