@@ -12,7 +12,7 @@ export default Ember.Route.extend({
              email: email,
              password: password
         }).then(function() {
-            this.transitionTo('post-a-move');
+            this.transitionTo('post-a-move',this.get('session.uid'));
         }.bind(this));
     },
           signUp: function(){

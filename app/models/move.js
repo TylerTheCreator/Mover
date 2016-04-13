@@ -12,5 +12,7 @@ export default DS.Model.extend({
   toAddress: DS.attr(),
   fromAddress: DS.attr(),
   date: DS.attr(),
+  latitude: DS.attr('number'),
+  longitude: DS.attr('number')
   // user: DS.belongsTo('user', { async: true});
 });
