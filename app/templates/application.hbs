@@ -9,12 +9,19 @@
         </h1>{{/link-to}}
       </div>
       <div class="nav">
-        {{#link-to 'post-a-move'}}<p>Post a Move</p>{{/link-to}}
+        {{#if session.isAuthenticated}}
+          {{#link-to 'post-a-move' session.uid}}<p>Post a Move</p>{{/link-to}}
+        {{else}}
+          {{#link-to 'sign-in'}}<p>Post a Move</p>{{/link-to}}
+        {{/if}}
+
         {{#link-to 'about'}}<p>About</p>{{/link-to}}
+
         {{#if session.isAuthenticated}}
         {{else}}
           {{#link-to 'sign-in'}}<p>Sign In</p>{{/link-to}}
         {{/if}}
+        
         {{#link-to 'mover-sign-up'}}<span><p>Become a Mover</p></span>{{/link-to}}
         {{#if session.isAuthenticated}}
             <button {{action 'logout'}}>Logout</button>
@@ -23,7 +30,7 @@
     </div>
     {{#if session.isAuthenticated}}
     Hello {{session.currentUser.firstName}}!
-    {{#link-to 'about' session.uid}} Go to your private page. {{/link-to}}
+    {{#link-to 'user-profile'}} Go to your private page. {{/link-to}}
     {{/if}}
     {{outlet}}
 
