@@ -17,11 +17,6 @@
         {{/if}}
 
         {{#link-to 'about'}}<p>About</p>{{/link-to}}
-
-        {{#if session.isAuthenticated}}
-        {{else}}
-          {{#link-to 'sign-in'}}<p>Sign In</p>{{/link-to}}
-        {{/if}}
         
         {{#link-to 'mover-sign-up'}}<span><p>Become a Mover</p></span>{{/link-to}}
         {{#if session.isAuthenticated}}
@@ -37,13 +32,9 @@
         {{/if}}
       </div>
     </div>
-
     {{#if session.isAuthenticated}}
-
-
     {{#link-to 'user-profile' session.uid}} Go to your private page. {{/link-to}}
     {{/if}}
-
     {{outlet}}
   <div class="footer">
     <hr>
