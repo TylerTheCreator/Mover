@@ -22,7 +22,7 @@
       </div>
     </div>
     {{#if session.isAuthenticated}}
-    Hello {{model.firstName}}!
+    Hello {{session.currentUser.firstName}}!
     {{#link-to 'about' session.uid}} Go to your private page. {{/link-to}}
     {{/if}}
     {{outlet}}
