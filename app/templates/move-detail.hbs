@@ -5,20 +5,28 @@
   </div>
 </div>
 <div class="container">
-  <div class="moveDetails">
+  <div class="bidButtonContainer">
     {{bid-on-move move=model saveBid="saveBid"}}
-    <div class="moveImage" style="background: url('{{model.image}}') center center no-repeat; background-size: contain;"></div>
-    <h3 class='type'>Move Type:{{model.type}}</h3>
-    <h4>List of Items:</h4>
-    <p>{{model.itemsList}}</p>
-    <p class="stairs">Stairs {{stairs-icon model}}</p>
-    <p class="assembly">Assembly {{assembly-icon model}}</p>
-    <h4>Description</h4>
-    <p>{{model.description}}</p>
+  </div>
+  <div class="moveDetails">
+    <div class="textContainer">
+      <!-- <div class="moveImage" style="background: url('{{model.image}}') center center no-repeat; background-size: contain;"></div> -->
+      <h2 class='type'>Move Type: {{model.type}}</h2>
+      <h4>List of Items:</h4>
+      <p>{{model.itemsList}}</p>
+      <p class="stairs">Stairs {{stairs-icon model}}</p>
+      <p class="assembly">Assembly {{assembly-icon model}}</p>
+      <h4>Description</h4>
+      <p>{{model.description}}</p>
+    </div>
+    <div class="imageContainer">
+      <img class='moveImage' src="{{model.image}}">
+    </div>
   </div>
   <div class="map">
     <!-- Get whatever tyler is coding for this -->
   </div>
+  <h2 class="centeredText">Current Bids On This Move</h2>
   {{#each model.bids as |bid|}}
     {{bid-tile bid=bid destroyBid="destroyBid"}}
   {{/each}}

@@ -1,0 +1,17 @@
+.bidFormSection {
+  @include flexbox();
+  width: 100%;
+  form {
+    width: 100%;
+    // @include flexbox($direction: column);
+    input {
+      // margin-right: 2%;
+    }
+    button {
+      padding: 5px 20px;
+    }
+  }
+  .secondaryButton {
+    padding: 5px 20px;
+  }
+}
