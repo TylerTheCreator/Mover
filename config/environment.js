@@ -1,5 +1,6 @@
 /* jshint node: true */
 
+
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'mover',
@@ -11,12 +12,16 @@ module.exports = function(environment) {
     },
     baseURL: '/',
     locationType: 'auto',
+
     EmberENV: {
       FEATURES: {
+
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       }
+
     },
+
 
     APP: {
       // Here you can pass flags/options to your application instance
@@ -31,6 +36,9 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
+  ENV.googleMap = {
+  apiKey: 'your-unique-google-map-api-key'
+}
 
   if (environment === 'test') {
     // Testem prefers this...

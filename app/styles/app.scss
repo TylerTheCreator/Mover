@@ -9,3 +9,8 @@
 @import 'base/index';
 @import 'layout/index';
 @import 'components/index';
+
+.ember-cli-g-map {
+    height: 200px;
+    size:20px;
+}
