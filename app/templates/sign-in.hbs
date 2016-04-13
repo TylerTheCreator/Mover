@@ -10,8 +10,16 @@
     <div class="login">
       {{input type="text" value=userEmail placeholder="Email"}}<br>
       {{input type="password" value=userPassword placeholder="Password"}}<br>
-      <button {{action "login"}}> Login </button>
-      <!-- <button {{action 'toggleDetail'}}>Don't have an account? Sign Up for Mover</button> -->
+      <button {{action "login"}}>
+      {{#if session.isWorking}}
+      <img src='http://www.ajaxload.info/images/exemples/25.gif'/>
+      {{/if}}
+       Login 
+       </button>
+      
+      
+
+       <!--<button {{action 'toggleDetail'}}>Don't have an account? Sign Up for Mover</button> -->
     </div>
   </div>
 </div>
