@@ -8,7 +8,6 @@ beforeModel: function(){
     this.transitionTo('sign-in');
   }
 },
-});
   model() {
     return this.store.findAll('move');
   },
