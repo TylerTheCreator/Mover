@@ -1,0 +1,31 @@
+<div class="box-outline">
+  <h3>Move Details</h3>
+  <form>
+    <div class="form-group">
+      <label for="name">Name:</label><br>
+      {{input value=name id="name"}}
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone:</label><br>
+      {{input value=phone id="phone"}}
+    </div>
+
+    <div class="form-group">
+      <label for="email">
+        Email:</label><br>
+      {{input value=email id="email"}}
+    </div>
+
+    <div class="form-group">
+      <label for="cityState">City/State:</label><br>
+      {{input value=cityState id="cityState"}}
+    </div>
+
+    <div class="form-group">
+      <label for="vechileType">Vechile Type:</label><br>
+      {{input value=vechileType id="vechileType"}}
+    </div>
+    <button {{action 'save'}}>APPLY</button>
+  </form>
+</div>

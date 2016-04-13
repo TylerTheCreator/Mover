@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('user-profile');
   this.route('movers-list');
   this.route('mover-sign-up');
+  this.route('apply-to-become-a-mover');
 });
 
 export default Router;
