@@ -21,7 +21,7 @@
         {{else}}
           {{#link-to 'sign-in'}}<p>Sign In</p>{{/link-to}}
         {{/if}}
-        
+
         {{#link-to 'mover-sign-up'}}<span><p>Become a Mover</p></span>{{/link-to}}
         {{#if session.isAuthenticated}}
             <button {{action 'logout'}}>Logout</button>
@@ -30,7 +30,7 @@
     </div>
     {{#if session.isAuthenticated}}
     Hello {{session.currentUser.firstName}}!
-    {{#link-to 'user-profile'}} Go to your private page. {{/link-to}}
+    {{#link-to 'user-profile' session.uid}} Go to your private page. {{/link-to}}
     {{/if}}
     {{outlet}}
 
