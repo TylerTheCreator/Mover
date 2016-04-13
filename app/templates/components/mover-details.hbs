@@ -2,23 +2,19 @@
   <h3>Move Details</h3>
   <form>
     <div class="form-group">
-      <label for="type">Type</label>
-      {{input value=type id="type"}}
+      {{input value=type id="type" placeholder="Type"}} <br>
     </div>
 
     <div class="form-group">
-      <label for="itemsList">Items List</label>
-      {{input value=itemsList id="itemsList"}}
+      {{input value=itemsList id="itemsList" placeholder="Items List"}}
     </div>
 
     <div class="form-group">
-      <label for="numberOfItems">numberOfItems</label>
-      {{input value=numberOfItems id="numberOfItems"}}
+      {{input value=numberOfItems id="numberOfItems" placeholder="Number of Items"}}
     </div>
 
     <div class="form-group">
-      <label for="description">description</label>
-      {{input value=description id="description"}}
+      {{input value=description id="description" placeholder="Description"}}
     </div>
 
     <div class="form-group">
@@ -37,23 +33,19 @@
     </div>
 
     <div class="form-group">
-      <label for="image">image</label>
-      {{input value=image id="image"}}
+      {{input value=image id="image" placeholder="Image"}}
     </div>
 
     <div class="form-group">
-      <label for="toAddress">toAddress</label>
-      {{input value=toAddress id="toAddress"}}
+      {{input value=toAddress id="toAddress" placeholder="To Address"}}
     </div>
 
     <div class="form-group">
-      <label for="fromAddress">fromAddress</label>
-      {{input value=fromAddress id="fromAddress"}}
+      {{input value=fromAddress id="fromAddress" placeholder="From Address"}}
     </div>
 
     <div class="form-group">
-      <label for="date">date</label>
-      {{input value=date id="date"}}
+      {{input value=date id="date" placeholder="Date"}}
     </div>
     <button {{action 'save'}}>Post Move</button>
   </form>
