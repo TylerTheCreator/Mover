@@ -18,7 +18,6 @@
 
         {{#link-to 'about'}}<p>About</p>{{/link-to}}
 
-
         {{#link-to 'mover-sign-up'}}<span><p>Become a Mover</p></span>{{/link-to}}
         {{#if session.isAuthenticated}}
             <p><a href=""{{action 'logout'}}>Sign Out</a></p>
@@ -34,11 +33,6 @@
       </div>
     </div>
 
-    <!-- {{#if session.isAuthenticated}}
-    Hey {{session.currentUser.firstName}}!
-
-    {{#link-to 'user-profile' session.uid}} Go to your private page. {{/link-to}}
-    {{/if}} -->
 
     {{outlet}}
   <div class="footer">
