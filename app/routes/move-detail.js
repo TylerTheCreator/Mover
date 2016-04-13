@@ -14,6 +14,10 @@ export default Ember.Route.extend({
        return move.save();
      });
      this.transitionTo('move-detail', params.move);
+   },
+   destroyBid(bid){
+     bid.destroyRecord();
+     this.transitionTo('move-detail');
    }
  }
 });

@@ -1,4 +1,6 @@
-<h1>hey bitches!</h1>
-{{bid.bid}}
-{{bid.name}}
-{{bid.email}}
+<div class="bidItem">
+  {{bid.bid}}
+  {{bid.name}}
+  {{bid.email}}
+  <button {{action 'delete' bid}}>Delete Bid</button>
+</div>
