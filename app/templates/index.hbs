@@ -27,7 +27,11 @@
   </div>
   <div class="homepageBanner">
     <div class="postMove item">
-      {{#link-to 'post-a-move'}}<h2 class="view">POST A MOVE</h2>{{/link-to}}
+      {{#if session.isAuthenticated}}
+      {{#link-to 'post-a-move' session.uid}}<h2 class="view">POST A MOVE</h2>{{/link-to}}
+      {{else}}
+      {{#link-to 'sign-in'}}<h2 class="view">POST A MOVE</h2>{{/link-to}}
+      {{/if}}
     </div>
     <div class="viewMoves item">
       {{#link-to 'open-moves'}}<h2 class="view">VIEW OPEN MOVES</h2>{{/link-to}}
