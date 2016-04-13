@@ -70,9 +70,9 @@
     @include flexbox($justify: center, $align-items: space-around, $wrap: wrap);
     margin-bottom: 4%;
     a {
-      margin: 2%;
-      width:  170px;
-      height: 170px;
+      margin: 1%;
+      width:  160px;
+      height: 160px;
       div {
         height: 100%;
         border-radius: 50%;
