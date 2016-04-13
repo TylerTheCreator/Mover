@@ -51,3 +51,41 @@
     @include fontFormat(24px, $white, lighter, $l-spacing: 3px);
   }
 }
+
+.aboutHeader {
+  padding: 3%;
+  @include background-image(linear-gradient(rgba($primaryBlue, 0.7),
+  rgba($primaryBlue, 0.7)),url("#{$img-path}/portland4.png"));
+  background-position: center;
+  background-size: cover;
+  @include flexbox($align-items: center, $direction: column);
+  @extend %centered;
+  color: $white;
+  margin-bottom: 5%;
+  .aboutText {
+    @include fontFormat(16px, $l-spacing: 1px);
+    @include flexbox($align-items: space-around, $direction: column);
+  }
+  .teamGallery {
+    @include flexbox($justify: center, $align-items: space-around, $wrap: wrap);
+    margin-bottom: 4%;
+    a {
+      margin: 2%;
+      width:  170px;
+      height: 170px;
+      div {
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+  }
+  h2 {
+    width: 100%;
+    @include fontFormat(45px, $white, $weight: lighter, $l-spacing: 3px);
+    text-transform: uppercase;
+  }
+  h3 {
+    @include fontFormat(24px, $white, lighter, $l-spacing: 3px);
+    margin-top: 5%;
+  }
+}

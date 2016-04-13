@@ -3,6 +3,10 @@ FUNCTIONALITY:
 - Fix Hello ____ in application.hbs to display correct name.
 - Add move-tiles to user profile and ability to edit / delete moves
 - Add "edit profile" to user profile -- ability to add image.
+- correct fields showing up on move detail page ????
+
 
 STYLES:
-- move-detail 
+- about page
+- post-a-move page
+- user profile
