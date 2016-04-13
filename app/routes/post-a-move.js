@@ -15,7 +15,6 @@ beforeModel: function(){
 
   actions: {
     save3(params) {
-      alert("hey");
       var newMove = this.store.createRecord('move', params);
       var user = params.user;
       user.get('moves').addObject(newMove);

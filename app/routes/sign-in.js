@@ -3,6 +3,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   actions: {
+    userCreated: false,
+    toggleDetail(){
+      this.set('userCreated', true);
+      console.log('hello');
+    },
     login: function() {
       var controller = this.get('controller');
       var email = controller.get('userEmail');
@@ -16,14 +21,14 @@ export default Ember.Route.extend({
             this.transitionTo('post-a-move', this.get('session.uid'));
         }.bind(this));
     },
-          signUp: function(){
-         var controller = this.get('controller');
-         var firstName = controller.get('firstName');
-         var lastName = controller.get('lastName');
-         var email = controller.get('email');
-         var password = controller.get('password');
-         var ref = new Firebase("https://mover-app.firebaseio.com");
-         var _this = this;
+     signUp: function(){
+     var controller = this.get('controller');
+     var firstName = controller.get('firstName');
+     var lastName = controller.get('lastName');
+     var email = controller.get('email');
+     var password = controller.get('password');
+     var ref = new Firebase("https://mover-app.firebaseio.com");
+     var _this = this;
 
      ref.createUser({
          email    : email,

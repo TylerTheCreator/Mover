@@ -1,0 +1,47 @@
+.bidFormSection {
+  @include flexbox();
+  width: 100%;
+  form {
+    width: 100%;
+    // @include flexbox($direction: column);
+    input {
+      // margin-right: 2%;
+    }
+    button {
+      padding: 5px 20px;
+    }
+  }
+  .secondaryButton {
+    padding: 5px 20px;
+  }
+}
+
+.signInContainer {
+  @include background-image(linear-gradient(rgba($primaryBlue, 0.6),
+  rgba($primaryBlue, 0.6)),url("#{$img-path}/house-car.jpg"));
+  height: 80vh;
+  background-size: cover;
+  @include flexbox($justify: center, $align-items: center);
+  .forms {
+    width: 40%;
+    background-color: rgba($white, 0.7);
+    padding: 5%;
+    @include flexbox($justify: space-between, $direction: column);
+    height: 55%;
+    border-radius: 5px;
+    min-height: 500px;
+  }
+  input {
+    width: 100%;
+    height: 4vh;
+    min-height: 20px;
+    font-size: 16px;
+    @extend %bodyFont;
+    letter-spacing: 1px;
+    padding-left: 5%;
+  }
+  button {
+    margin: 2% auto 0 auto;
+    display: block;
+  }
+}
