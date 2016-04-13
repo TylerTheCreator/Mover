@@ -1,5 +1,6 @@
 import Ember from 'ember';
 
+
 export default Ember.Route.extend({
 
 beforeModel: function(){
@@ -8,16 +9,19 @@ beforeModel: function(){
     this.transitionTo('sign-in');
   }
 },
-  model() {
-    return this.store.findAll('move');
+  model(params) {
+    return this.store.findRecord('user', params.user_id);
   },
 
   actions: {
     save3(params) {
-      console.log(params);
       var newMove = this.store.createRecord('move', params);
-      newMove.save();
-      this.transitionTo('post-a-move');
+      var user = params.user;
+      user.get('moves').addObject(newMove);
+      newMove.save().then(function() {
+        return user.save();
+      });
+      this.transitionTo('user-profile');
     },
   }
 });

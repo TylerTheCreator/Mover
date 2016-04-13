@@ -10,49 +10,58 @@
       <label for="itemsList">Items List</label>
       {{input value=itemsList id="itemsList"}}
     </div>
+    <div class="form-group">
+      <label for="latitude">Latitude</label>
+      {{input value=latitude id="latitude"}}
+    </div>
 
     <div class="form-group">
-      <label for="numberOfItems">numberOfItems</label>
+      <label for="longitude">Longitude</label>
+      {{input value=longitude id="longitude"}}
+    </div>
+
+    <div class="form-group">
+      <label for="numberOfItems">Number of Items</label>
       {{input value=numberOfItems id="numberOfItems"}}
     </div>
 
     <div class="form-group">
-      <label for="description">description</label>
+      <label for="description">Description</label>
       {{input value=description id="description"}}
     </div>
 
     <div class="form-group">
-      <label for="fragile">fragile</label>
+      <label for="fragile">Fragile?</label>
       {{input type="checkbox" id="fragile" checked=fragile class="toggle"}}
     </div>
 
     <div class="form-group">
-      <label for="assembly">assembly</label>
+      <label for="assembly">Assembly required?</label>
       {{input type="checkbox" id="assembly" checked=assembly class="toggle"}}
     </div>
 
     <div class="form-group">
-      <label for="stairs">stairs</label>
+      <label for="stairs">Stairs to Climb?</label>
       {{input type="checkbox" id="stairs" checked=stairs class="toggle"}}
     </div>
 
     <div class="form-group">
-      <label for="image">image</label>
+      <label for="image">Image URL</label>
       {{input value=image id="image"}}
     </div>
 
     <div class="form-group">
-      <label for="toAddress">toAddress</label>
-      {{input value=toAddress id="toAddress"}}
+      <label for="toAddress">Where are you moving to?</label>
+      {{input value=toAddress id="toAddress" placeholder="Address"}}
     </div>
 
     <div class="form-group">
-      <label for="fromAddress">fromAddress</label>
-      {{input value=fromAddress id="fromAddress"}}
+      <label for="fromAddress">Where are you moving from?</label>
+      {{input value=fromAddress id="fromAddress" placeholder="Address"}}
     </div>
 
     <div class="form-group">
-      <label for="date">date</label>
+      <label for="date">Date of Your Move</label>
       {{input value=date id="date"}}
     </div>
     <button {{action 'save'}}>Post Move</button>

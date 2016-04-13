@@ -12,12 +12,13 @@ export default Ember.Route.extend({
       var controller = this.get('controller');
       var email = controller.get('userEmail');
       var password = controller.get('userPassword');
+      // var id = controller.get('uid');
         this.get('session').open('firebase', {
              provider: 'password',
              email: email,
-             password: password
+             password: password,
         }).then(function() {
-            this.transitionTo('post-a-move');
+            this.transitionTo('post-a-move', this.get('session.uid'));
         }.bind(this));
     },
      signUp: function(){
