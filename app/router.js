@@ -6,9 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('about', { path: ':user_id' });
+  this.route('about', { path: '/about/:user_id' });
   this.route('contact');
-  this.route('post-a-move'); 
+  this.route('post-a-move', { path: '/post-a-move/:user_id' });
   this.route('sign-in');
   this.route('open-moves');
   this.route('move-detail', {path: '/move-detail/:move_id'});
