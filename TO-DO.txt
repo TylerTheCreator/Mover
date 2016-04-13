@@ -1,0 +1,8 @@
+FUNCTIONALITY:
+
+- Fix Hello ____ in application.hbs to display correct name.
+- Add move-tiles to user profile and ability to edit / delete moves
+- Add "edit profile" to user profile -- ability to add image.
+
+STYLES:
+- move-detail 
