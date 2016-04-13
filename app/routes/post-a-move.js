@@ -15,14 +15,13 @@ beforeModel: function(){
 
   actions: {
     save3(params) {
-      alert("hey");
       var newMove = this.store.createRecord('move', params);
       var user = params.user;
       user.get('moves').addObject(newMove);
       newMove.save().then(function() {
         return user.save();
       });
-      this.transitionTo('user-profile');
+      this.transitionTo('user-profile', this.get('session.uid'));
     },
   }
 });
