@@ -26,6 +26,9 @@
     width: 40%;
     background-color: rgba($white, 0.7);
     padding: 5%;
+    @include flexbox($justify: space-between, $direction: column);
+    height: 55%;
+    border-radius: 5px;
   }
   input {
     width: 100%;
@@ -36,7 +39,7 @@
     padding-left: 5%;
   }
   button {
-    margin: 0 auto;
+    margin: 2% auto 0 auto;
     display: block;
   }
 }
