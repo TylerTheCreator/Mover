@@ -6,7 +6,7 @@
 </div>
 <div class="container">
   <div class="moveDetails">
-    <button id="bidMove">Bid on this Move</button>
+    {{bid-on-move move=model saveBid="saveBid"}}
     <div class="moveImage" style="background: url('{{model.image}}') center center no-repeat; background-size: contain;"></div>
     <h3 class='type'>Move Type:{{model.type}}</h3>
     <h4>List of Items:</h4>
@@ -20,3 +20,5 @@
     <!-- Get whatever tyler is coding for this -->
   </div>
 </div>
+
+{{ log model }}

@@ -12,5 +12,6 @@ export default DS.Model.extend({
   toAddress: DS.attr(),
   fromAddress: DS.attr(),
   date: DS.attr(),
+  bids: DS.hasMany('bid', {async: true})
   // user: DS.belongsTo('user', { async: true});
 });

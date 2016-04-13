@@ -14,6 +14,7 @@ beforeModel: function(){
 
   actions: {
     save3(params) {
+      console.log(params);
       var newMove = this.store.createRecord('move', params);
       newMove.save();
       this.transitionTo('post-a-move');
