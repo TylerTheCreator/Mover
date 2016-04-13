@@ -22,10 +22,9 @@
     <div class="imageContainer">
       <img class='moveImage' src="{{model.image}}">
     </div>
+
   </div>
-  <div class="map">
-    <!-- Get whatever tyler is coding for this -->
-  </div>
+
   <h2 class="centeredText">Current Bids On This Move</h2>
   {{#each model.bids as |bid|}}
     {{bid-tile bid=bid destroyBid="destroyBid"}}

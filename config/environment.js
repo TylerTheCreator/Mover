@@ -23,7 +23,12 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+  ENV['g-map'] = {
+    libraries: ['places'],
+    key: 'AIzaSyA4jfqxal638EJO9nFPEAxGaFYdFIITiDs',
+    protocol: 'https'
 
+  }
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
