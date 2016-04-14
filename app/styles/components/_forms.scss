@@ -5,6 +5,7 @@
   form {
     @include flexbox($justify: center, $direction: column, $align-items: center);
     width: 50%;
+    margin: 0 auto;
     input {
       width: 100%;
       height: 50px;
