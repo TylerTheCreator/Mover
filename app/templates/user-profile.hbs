@@ -1,5 +1,6 @@
 {{#if session.isAuthenticated}}
   {{#each model.moves as |move|}}
-    {{move-tile move=move}}
+    <br>
+    Type: {{move-tile move=move}}
   {{/each}}
 {{/if}}
