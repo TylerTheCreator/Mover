@@ -39,6 +39,9 @@
     @include flexbox($justify: space-between, $direction: column);
     height: 600px;
     border-radius: 5px;
+    @media screen and #{$mobile}{
+      width: 95%;
+    }
   }
   input {
     width: 100%;
@@ -120,23 +123,22 @@
 }
 
 .applyContainer {
-  h1 {
-    @include fontFormat(50px, $color: $white, $l-spacing: 1px, $l-height: 100px);
-    @extend %centered;
-    text-shadow: 2px 2px 2px $primaryBlue;
-  }
   @include background-image(linear-gradient(rgba($primaryBlue, 0.6),
   rgba($primaryBlue, 0.6)),url("#{$img-path}/work-girl.jpg"));
   height: 80vh;
+  min-height: 780px;
   background-size: cover;
-  @include flexbox($justify: center, $direction: column, $align-items: center);
+  @include flexbox($justify: center, $align-items: center, $direction: column);
   .forms {
-    width: 40%;
+    width: 500px;
     background-color: rgba($white, 0.7);
-    padding: 3%;
+    padding: 70px 40px;
     @include flexbox($justify: space-between, $direction: column);
-    height: 630px;
+    height: 600px;
     border-radius: 5px;
+    @media screen and #{$mobile}{
+      width: 95%;
+    }
   }
   input {
     width: 100%;
@@ -145,16 +147,9 @@
     @extend %bodyFont;
     letter-spacing: 1px;
     padding-left: 5%;
-    margin: 5px 0 10px 0;
   }
   button {
     margin: 2% auto 2% auto;
     display: block;
-  }
-  .signUp {
-    text-align: center;
-    color: $primaryBlue;
-    font-weight: bold;
-    letter-spacing: 1px;
   }
 }
