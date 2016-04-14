@@ -12,10 +12,10 @@
   }
 }
 
-.bidButtonContainer {
-  margin-top: 5%;
-  @include flexbox($justify: center);
-}
+// .bidButtonContainer {
+//   margin-top: 5%;
+//   @include flexbox($justify: center);
+// }
 
 .bidItem {
   @include flexbox($justify: space-between);

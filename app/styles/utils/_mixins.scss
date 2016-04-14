@@ -10,10 +10,11 @@
   line-height: $l-height;
 }
 
-@mixin flexbox ($display: flex, $justify: null, $align-items: null, $direction: null, $align-self: null) {
+@mixin flexbox ($display: flex, $justify: null, $align-items: null, $direction: null, $align-self: null, $wrap: null) {
   display: $display;
   justify-content: $justify;
   align-items: $align-items;
   flex-direction: $direction;
   align-self: $align-self;
+  flex-wrap: $wrap;
 }
