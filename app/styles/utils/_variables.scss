@@ -11,4 +11,7 @@ $background: #DAD2D8;
 // File Paths -- Assets in public folder //
 
 $img-path: '/img/';
-$font-path: '/fonts/'
+$font-path: '/fonts/';
+
+// Media Queries - Homepage //
+$tablet: '(max-width: 768px)'

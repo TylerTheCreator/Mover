@@ -28,9 +28,15 @@
     h3 {
       @include fontFormat(24px, $l-height: 35px);
       text-shadow: 1px 1px 1px $white;
+      @media screen and #{$tablet} {
+        @include fontFormat(20px);
+      }
     }
     p {
       @include fontFormat(22px, $l-height: 35px);
+      @media screen and #{$tablet} {
+        @include fontFormat(16px);
+      }
     }
   }
 }
@@ -46,14 +52,19 @@
     background-repeat: no-repeat;
     @include flexbox($justify: center, $align-items: center, $direction: column);
     transition: all 300ms linear;
+    @media screen and #{$tablet} {
+      @include flexbox($justify: baseline);
+    }
     p {
       @include fontFormat(25px, $white,$l-spacing: 3px);
       margin-bottom: 0;
       text-shadow: 2px 2px 2px $primaryBlue;
+      @extend %centered;
     }
     a {
       @include fontFormat(25px, $white, lighter, 3px);
       text-shadow: 2px 2px 2px $primaryBlue;
+      @extend %centered;
     }
     &:hover {
       transition: all 300ms linear;
@@ -64,9 +75,15 @@
     @include background-image(linear-gradient(rgba($primaryBlue, 0.4),
     rgba($primaryBlue, 0.4)),url("#{$img-path}/empty.jpg"));
     background-position: bottom;
+    @media screen and #{$tablet} {
+      background-size: cover;
+    }
   }
   .viewMoves {
     @include background-image(linear-gradient(rgba($primaryBlue, 0.4),
     rgba($primaryBlue, 0.4)),url("#{$img-path}/mover.jpg"));
+    @media screen and #{$tablet} {
+      background-size: cover;
+    }
   }
 }
