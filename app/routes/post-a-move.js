@@ -21,7 +21,7 @@ beforeModel: function(){
       newMove.save().then(function() {
         return user.save();
       });
-      this.transitionTo('user-profile');
+      this.transitionTo('user-profile', this.get('session.uid'));
     },
   }
 });

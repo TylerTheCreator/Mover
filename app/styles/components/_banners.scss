@@ -1,0 +1,8 @@
+.banner {
+  background-color: rgba($white, 0.7);
+  margin-bottom: 80px;
+  width: 70%;
+  @extend %centered;
+  border-radius: 5px;
+  @include fontFormat(18px, $l-spacing: 1px);
+}

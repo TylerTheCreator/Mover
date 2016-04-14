@@ -1,48 +1,34 @@
-<div class="box-outline">
-  <h3>Move Details</h3>
+<div class="postMoveForm">
   <form>
     <div class="form-group">
       <label for="type">Type</label>
-      {{input value=type id="type"}}
+      {{input value=type placeholder="Move Furniture, Craigslist Pickup, Donation, etc." id="type"}}
     </div>
 
     <div class="form-group">
       <label for="itemsList">Items List</label>
-      {{input value=itemsList id="itemsList"}}
+      {{input value=itemsList placeholder="Couch, Bed Frame, Boxes, etc." id="itemsList"}}
     </div>
-    <div class="form-group">
-      <label for="latitude">Latitude</label>
-      {{input value=latitude id="latitude"}}
-    </div>
-
-    <div class="form-group">
-      <label for="longitude">Longitude</label>
-      {{input value=longitude id="longitude"}}
-    </div>
-
     <div class="form-group">
       <label for="numberOfItems">Number of Items</label>
       {{input value=numberOfItems id="numberOfItems"}}
     </div>
+    <div class="longLat">
+      <div class="form-group">
+        <label for="latitude">Latitude</label>
+        {{input value=latitude id="latitude"}}
+      </div>
+
+      <div class="form-group">
+        <label for="longitude">Longitude</label>
+        {{input value=longitude id="longitude"}}
+      </div>
+    </div>
+
 
     <div class="form-group">
       <label for="description">Description</label>
       {{input value=description id="description"}}
-    </div>
-
-    <div class="form-group">
-      <label for="fragile">Fragile?</label>
-      {{input type="checkbox" id="fragile" checked=fragile class="toggle"}}
-    </div>
-
-    <div class="form-group">
-      <label for="assembly">Assembly required?</label>
-      {{input type="checkbox" id="assembly" checked=assembly class="toggle"}}
-    </div>
-
-    <div class="form-group">
-      <label for="stairs">Stairs to Climb?</label>
-      {{input type="checkbox" id="stairs" checked=stairs class="toggle"}}
     </div>
 
     <div class="form-group">
@@ -51,12 +37,12 @@
     </div>
 
     <div class="form-group">
-      <label for="toAddress">Where are you moving to?</label>
-      {{input value=toAddress id="toAddress" placeholder="Address"}}
+      <label for="toAddress">What address are you moving to?</label>
+      {{input value=toAddress id="toAddress"}}
     </div>
 
     <div class="form-group">
-      <label for="fromAddress">Where are you moving from?</label>
+      <label for="fromAddress">What address are you moving from?</label>
       {{input value=fromAddress id="fromAddress" placeholder="Address"}}
     </div>
 
@@ -64,6 +50,26 @@
       <label for="date">Date of Your Move</label>
       {{input value=date id="date"}}
     </div>
-    <button {{action 'save'}}>Post Move</button>
+    <div class="checkboxContainer">
+      <p>Additional Details</p>
+      <hr>
+      <div class="checkboxes">
+        <div class="form-group-check">
+          <label for="fragile">Fragile?</label>
+          {{input type="checkbox" id="fragile" checked=fragile class="toggle"}}
+        </div>
+
+        <div class="form-group-check">
+          <label for="assembly">Assembly required?</label>
+          {{input type="checkbox" id="assembly" checked=assembly class="toggle"}}
+        </div>
+
+        <div class="form-group-check">
+          <label for="stairs">Stairs to Climb?</label>
+          {{input type="checkbox" id="stairs" checked=stairs class="toggle"}}
+        </div>
+      </div>
+    </div>
+    <button {{action 'save'}}>Post Your Move</button>
   </form>
 </div>
