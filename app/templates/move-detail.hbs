@@ -35,6 +35,7 @@
   <div class="map">
     <!-- Get whatever tyler is coding for this -->
   </div>
+
   <h2 class="centeredText">Current Bids On This Move</h2>
   <div class="bidListHeader">
     <p>Payment Request</p>
@@ -42,6 +43,7 @@
     <p class="bidEmail">Mover's Email</p>
     <p></p>
   </div>
+  {{no-bids model}}
   {{#each model.bids as |bid|}}
     {{bid-tile bid=bid destroyBid="destroyBid"}}
   {{/each}}
