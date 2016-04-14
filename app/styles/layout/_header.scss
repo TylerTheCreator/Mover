@@ -66,9 +66,6 @@
   @extend %centered;
   color: $white;
   margin-bottom: 2%;
-  .container {
-    margin-left: -15px;
-  }
   h2 {
     @include fontFormat(45px, $white, $l-spacing: 3px);
     text-shadow: 1px 1px 1px $primaryBlue;
