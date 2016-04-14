@@ -26,15 +26,18 @@
 }
 
 .profileNav {
-  @include flexbox($align-items: center);
-  img {
-    width: 35px;
-    margin-left: 12px;
-    border-radius: 100%;
+  @include flexbox($justify: space-between);
+  position: absolute;
+  top: 1%;
+  right: 2%;
+  width: 250px;
+  .yourProfile {
+    @include flexbox($align-items: center);
+    img {
+      width: 35px;
+      margin-left: 12px;
+      margin-right: 12px;
+      border-radius: 100%;
+    }
   }
-  // a:last-child {
-  //   &:hover {
-  //     border-bottom: none;
-  //   }
-  // }
 }

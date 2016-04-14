@@ -1,12 +1,15 @@
 .contentWrapper {
-  margin-top: 5%;
-  h2 {
-    @extend %centered;
+  .container {
+    margin: 0;
+    padding: 0;
   }
 }
 
 .how-it-works {
-  @include flexbox ($justify: space-between);
+  @include flexbox ();
+  flex: 1;
+  height: 40vh;
+  margin: 0;
   .number {
     @include flexbox ($justify: center, $align-items: center);
     background-color: $primaryBlue;
@@ -17,11 +20,18 @@
     margin: 0 auto;
   }
   .item {
-    @extend %centered;
-    background-color: rgba($primaryBlue, 0.2);
     flex: 1;
-    margin: 0px 2%;
-    padding: 3%;
+    border: 2px solid $primaryBlue;
+    padding: 8% 3%;
+    @extend %centered;
+    background-color: rgba($secondaryBlue, 0.1);
+    h3 {
+      @include fontFormat(24px, $l-height: 35px);
+      text-shadow: 1px 1px 1px $white;
+    }
+    p {
+      @include fontFormat(22px, $l-height: 35px);
+    }
   }
 }
 
@@ -29,8 +39,7 @@
 
 .homepageBanner {
   @include flexbox();
-  height: 25vh;
-  margin-top: 7%;
+  height: 320px;
   .item {
     flex: 1;
     background-size: 100%;
