@@ -6,7 +6,7 @@
     <label for="name">Your name</label>
     {{input value=name id="name" required="required"}}
     <label for="email">Email</label>
-    {{input value=email id="email"}}
+    {{input type="email" value=email id="email"}}
     <button type="submit">Post Bid</button>
   </form>
   <button class="secondaryButton"{{action 'toggleDetail'}}>Cancel</button>
