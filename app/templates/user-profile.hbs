@@ -20,7 +20,7 @@
   {{#if session.isAuthenticated}}
   {{#each model.moves as |move|}}
   {{profile-move-tile move=move deleteMove='deleteMove' model=user}}
-  {{edit-move}}
+  {{edit-move editMove="editMove" model=user move=move}}
   {{/each}}
   {{/if}}
 
