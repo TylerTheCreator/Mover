@@ -58,3 +58,19 @@ button {
   margin: 0 auto;
   margin-top: 20px;
 }
+
+.viewAllMoves {
+  color: $primaryBlue;
+  margin: 15px 0 0 25px;
+  .fa {
+    margin-right: 15px;
+    font-size: 14px;
+    transition: all 300ms ease-in-out;
+  }
+  &:hover {
+    .fa {
+      transition: all 300ms ease-in-out;
+      margin-right: 25px;
+    }
+  }
+}
