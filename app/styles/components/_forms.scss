@@ -29,12 +29,13 @@
   @include background-image(linear-gradient(rgba($primaryBlue, 0.6),
   rgba($primaryBlue, 0.6)),url("#{$img-path}/house-car.jpg"));
   height: 80vh;
+  min-height: 780px;
   background-size: cover;
   @include flexbox($justify: center, $align-items: center);
   .forms {
-    width: 40%;
+    width: 500px;
     background-color: rgba($white, 0.7);
-    padding: 5%;
+    padding: 70px 40px;
     @include flexbox($justify: space-between, $direction: column);
     height: 600px;
     border-radius: 5px;
