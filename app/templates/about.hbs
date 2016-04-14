@@ -8,10 +8,15 @@
         Nobody likes moving. We feel that. So we created Mover to help make the transition to your new place easier.
       </p>
       <p>
-        Why hire a moving company when you could connect with members of your community that are willing to help out? <b>Mover</b> allows you to privately post the details of your move and connect with our approved Movers that are ready to help you get the job done. Movers will bid on your move, and <b>you</b> get to choose the right fit.
+        Why hire a moving company when you could connect with members of your community that are willing to help out? Based in Portland, Oregon, <b>Mover</b> allows you to privately post the details of your move and connect with our approved Movers that are ready to help you get the job done. Movers will bid on your move, and <b>you</b> get to choose the right fit.
       </p>
-      <p>Whether you're making moves and need some friendly help, or you want to become a Mover and make some extra cash, {{#if session.isAuthenticated}}{{#link-to 'post-a-move' session.uid}}<a class="createLink">post a move today</a>{{/link-to}}{{else}}{{#link-to 'sign-in'}}<a class="createLink">create your account today</a>{{/link-to}}{{/if}} and get moving with us.
-      </p>
+
+
+      {{#if session.isAuthenticated}}
+        <p>Whether you're making moves and {{#link-to 'post-a-move' session.uid}}<a class="createLink">need some friendly help</a>{{/link-to}}, or you want to {{#link-to 'mover-sign-up'}}<a class="createLink">become a Mover</a>{{/link-to}} and make some extra cash, Mover can help get you where you're going.</p>
+      {{else}}
+        <p>Whether you're making moves and need some friendly help, or you want to become a Mover and make some extra cash, {{#link-to 'sign-in'}}<a class="createLink">create your account today</a>{{/link-to}} and get moving with us.</p>
+      {{/if}}
     </div>
     <h3>Our Team</h3>
     <div class="teamGallery">
