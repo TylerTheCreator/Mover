@@ -49,9 +49,15 @@
     h1 {
       @include fontFormat(60px, $white, $l-spacing: 3px);
       text-shadow: 1px 1px 1px $primaryBlue;
+      @media screen and #{$mobile} {
+        @include fontFormat(35px);
+      }
     }
     h3 {
       @include fontFormat(24px, $white, lighter, $l-spacing: 3px);
+      @media screen and #{$mobile} {
+        @include fontFormat(15px);
+      }
     }
   }
 }
@@ -68,9 +74,15 @@
   h2 {
     @include fontFormat(45px, $white, $l-spacing: 3px);
     text-shadow: 1px 1px 1px $primaryBlue;
+    @media screen and #{$mobile} {
+      @include fontFormat(23px, $white, $l-spacing: 3px);
+    }
   }
   h3 {
     @include fontFormat(24px, $white, lighter, $l-spacing: 3px);
+    @media screen and #{$mobile} {
+      @include fontFormat(16px, $white, lighter, $l-spacing: 3px);
+    }
   }
   .viewAllMoves {
     color: $white;
