@@ -19,6 +19,22 @@ button {
   }
 }
 
+.primaryWhite {
+  margin-top: 2%;
+  @include fontFormat(14px, $primaryBlue, lighter, 1px);
+  background: rgba($white, .9);
+  border: 3px solid $primaryBlue;
+  padding: 10px 20px;
+  transition: all 300ms ease-in-out;
+  &:hover {
+    cursor: pointer;
+    color: $white;
+    border: 3px solid $white;
+    background: $primaryBlue;
+    transition: all 300ms ease-in-out;
+  }
+}
+
 .secondaryButton {
   text-transform: none;
   @include fontFormat(13px, $primaryBlue, normal, 1px);
