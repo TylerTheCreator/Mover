@@ -9,17 +9,31 @@
   rgba($primaryBlue, 0.8)),url("#{$img-path}/vdub-van.jpeg"));
   background-size: cover;
   height: 70vh;
+  @media screen and #{$mobile} {
+    @include background-image(linear-gradient(rgba($primaryBlue, 0.4),
+    rgba($primaryBlue, 0.8)),url("#{$img-path}/vdub-van.jpeg"));
+    height: 50vh;
+    @include flexbox($align-items: center);
+  }
   h1 {
-    width: 800px;
+    width: 75%;
     margin: 10% auto 3% auto;
     text-shadow: 2px 2px 2px $primaryBlue;
     @include fontFormat(40px, $white, lighter, 1px);
+    @media screen and #{$mobile} {
+      @include fontFormat(24px, $l-height: 35px);
+      width: 90%;
+    }
   }
   h3 {
-    width: 600px;
+    width: 60%;
     margin: 0 auto 10% auto;
     text-shadow: 2px 2px 2px $primaryBlue;
     @include fontFormat(24px, $white, lighter, 1px, $l-height: 40px);
+    @media screen and #{$mobile} {
+      @include fontFormat(18px, $l-height: 35px);
+      width: 80%;
+    }
   }
 }
 
