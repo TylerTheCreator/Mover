@@ -165,4 +165,22 @@
     margin: 2% auto 2% auto;
     display: block;
   }
+  h1 {
+    @extend %centered;
+    @include fontFormat(42px, $white, $l-spacing: 3px, $l-height: 60px);
+    width: 90%;
+    text-shadow: 2px 2px 2px $primaryBlue;
+    @media screen and #{$mobile}{
+      margin-top: -200px;
+    }
+  }
+  h2 {
+    @extend %centered;
+    @include fontFormat(32px, $white, $l-spacing: 3px, $l-height: 60px);
+    width: 70%;
+    text-shadow: 2px 2px 2px $primaryBlue;
+    @media screen and #{$mobile}{
+      @include fontFormat(32px, $white, $l-spacing: 3px, $l-height: 40px);
+    }
+  }
 }
