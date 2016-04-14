@@ -1,18 +1,27 @@
 {{#if session.isAuthenticated}}
-  Avatar:
-  <img src='{{session.currentUser.profileImageURL}}' alt='avatar img'>
+
+  <div class="profileHeader">
+    <h1>Your Profile</h1>
+    <img class="profileImage" src='{{session.currentUser.profileImageURL}}' alt='avatar img'>
+  </div>
+  <div class="profileContent">
+
+  </div>
+  Change your avatar on <a target="_blank" href="https://en.gravatar.com">Gravatar.</a>
   <br>
-  {{#link-to 'move-detail' move.id}}
     Email-Address: {{session.currentUser.email}}
-  {{/link-to}}
   <br>
 {{/if}}
 
 {{user-profile-info user=model}}
 
 <br><br><hr>
-{{#if session.isAuthenticated}}
+<div class="userMoveList">
+  {{#if session.isAuthenticated}}
   {{#each model.moves as |move|}}
-    {{move-tile move=move}}
+  {{profile-move-tile move=move deleteMove='deleteMove' model=user}}
+  {{edit-move}}
   {{/each}}
-{{/if}}
+  {{/if}}
+
+</div>

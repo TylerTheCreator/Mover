@@ -103,6 +103,26 @@
   }
 }
 
+.profileHeader {
+  height: 35vh;
+  min-height: 320px;
+  padding: 3%;
+  @include background-image(linear-gradient(rgba($primaryBlue, 0.7),
+  rgba($primaryBlue, 0.7)),url("#{$img-path}/portland4.png"));
+  background-position: center;
+  background-size: cover;
+  @include flexbox($align-items: center, $direction: column);
+  @extend %centered;
+  color: $white;
+  margin-bottom: 5%;
+}
+
+.profileImage {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
 // &:hover {
 //   transition: all 300ms ease-in-out;
 //   .fa {
