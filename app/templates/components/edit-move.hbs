@@ -52,23 +52,21 @@
         <label for="date">Date of Your Move<i class="fa fa-asterisk"></i></label>
         {{input value=move.date id="date" required="required"}}
       </div>
-      <div class="checkboxContainer">
-        <p>Additional Details</p>
-        <hr>
-        <div class="checkboxes">
+      <div class="userCheckboxContainer">
+        <div class="userCheckboxes">
           <div class="form-group-check">
             <label for="fragile">Fragile?</label>
-            {{input type="checkbox" id="fragile" checked=fragile class="toggle"}}
+            {{input type="checkbox" id="fragile" checked=move.fragile class="toggle"}}
           </div>
 
           <div class="form-group-check">
             <label for="assembly">Assembly required?</label>
-            {{input type="checkbox" id="assembly" checked=assembly class="toggle"}}
+            {{input type="checkbox" id="assembly" checked=move.assembly class="toggle"}}
           </div>
 
           <div class="form-group-check">
             <label for="stairs">Stairs to Climb?</label>
-            {{input type="checkbox" id="stairs" checked=stairs class="toggle"}}
+            {{input type="checkbox" id="stairs" checked=move.stairs class="toggle"}}
           </div>
         </div>
       </div>

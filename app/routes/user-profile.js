@@ -11,7 +11,6 @@ export default Ember.Route.extend({
       this.transitionTo('user-profile');
     },
     editMove(move, formInputs) {
-      alert("hey");
       Object.keys(formInputs).forEach(function(key) {
         if(formInputs[key]!==undefined) {
           move.set(key, formInputs[key]);
