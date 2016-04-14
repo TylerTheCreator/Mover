@@ -2,7 +2,7 @@
 <div class="bidFormSection">
   <form class="bid" {{action "saveBid" on="submit"}}>
     <label for="bid">Your bid for this move</label>
-    {{input value=bid id="bid"}}
+    {{input type="number" value=bid id="bid"}}
     <label for="name">Your name</label>
     {{input value=name id="name" required="required"}}
     <label for="email">Email</label>
