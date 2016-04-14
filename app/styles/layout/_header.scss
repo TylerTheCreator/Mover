@@ -71,8 +71,11 @@
   color: $white;
   margin-bottom: 5%;
   .aboutText {
-    @include fontFormat(16px, $l-spacing: 1px);
+    @include fontFormat(15px, $l-spacing: 1px);
     @include flexbox($align-items: space-around, $direction: column);
+    .lead {
+      @include fontFormat(20px, $weight: lighter, $l-spacing: 1px);
+    }
   }
   .teamGallery {
     @include flexbox($justify: center, $align-items: space-around, $wrap: wrap);

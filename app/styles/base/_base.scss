@@ -32,6 +32,16 @@ a {
   text-decoration: none;
 }
 
+a.createLink {
+  color: lighten($secondaryBlue, 10%);
+  text-decoration: none;
+  transition: all 1s ease-in-out;
+  &:hover {
+    border-bottom: 1px solid lighten($secondaryBlue, 10%);
+    transition: all 1s ease-in-out;
+  }
+}
+
 .centeredText {
   @extend %centered;
 }

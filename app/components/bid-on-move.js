@@ -20,7 +20,7 @@ export default Ember.Component.extend({
         this.sendAction('saveBid', params);
       }
       else {
-        alert("Please enter in all fields.")
+        alert("Please enter in all fields.");
       }
     }
   }
