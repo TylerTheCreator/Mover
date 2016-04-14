@@ -12,8 +12,16 @@ export default Ember.Component.extend({
         email: this.get('email'),
         move: this.get('move')
       };
-      this.toggleProperty('biddingOnMove');
-      this.sendAction('saveBid', params);
+      if (this.get('name') !== undefined && this.get('bid') !== undefined && this.get('email') !== undefined) {
+        this.toggleProperty('biddingOnMove');
+        this.set('name', "");
+        this.set('bid', "");
+        this.set('email', "");
+        this.sendAction('saveBid', params);
+      }
+      else {
+        alert("Please enter in all fields.");
+      }
     }
   }
 });
