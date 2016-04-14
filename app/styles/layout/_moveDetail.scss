@@ -15,7 +15,6 @@
 .bidListHeader {
   @include flexbox($justify: space-between);
   border-bottom: 2px solid rgba($primaryBlue, 0.5);
-  // padding: 0px 2%;
   margin-top: 3%;
   p {
     flex: 1;

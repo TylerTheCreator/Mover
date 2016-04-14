@@ -41,4 +41,10 @@ export default function(){
     this.use('crossFade'),
     this.reverse('crossFade')
   );
+  this.transition(
+    this.fromRoute('open-moves'),
+    this.toRoute('move-detail'),
+    this.use('toLeft'),
+    this.reverse('toRight')
+  );
 }
