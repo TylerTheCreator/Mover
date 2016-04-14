@@ -1,17 +1,19 @@
-{{#if biddingOnMove}}
-<div class="bidFormSection">
+{{#liquid-spacer growDuration=250}}
+  {{#if biddingOnMove}}
+  <div class="bidFormSection">
 
-  <form class="bid" {{action "saveBid" on="submit"}}>
-    <label for="bid">Your Payment Request Per Hour<i class="fa fa-asterisk"></i></label>
-    {{input type="number" value=bid id="bid" required="required"}}
-    <label for="name">Your name<i class="fa fa-asterisk"></i></label>
-    {{input value=name id="name" required="required"}}
-    <label for="email">Email<i class="fa fa-asterisk"></i></label>
-    {{input value=email id="email" required="required"}}
-    <button type='submit'>Post Bid</button>
-  </form>
-  <button class="secondaryButton"{{action 'toggleDetail'}}>Cancel</button>
-</div>
-{{else}}
-  <button id="bidMove" {{action 'toggleDetail'}}>Bid on this Move</button>
-{{/if}}
+    <form class="bid" {{action "saveBid" on="submit"}}>
+      <label for="bid">Your Payment Request Per Hour<i class="fa fa-asterisk"></i></label>
+      {{input type="number" value=bid id="bid" required="required"}}
+      <label for="name">Your name<i class="fa fa-asterisk"></i></label>
+      {{input value=name id="name" required="required"}}
+      <label for="email">Email<i class="fa fa-asterisk"></i></label>
+      {{input value=email id="email" required="required"}}
+      <button type='submit'>Post Bid</button>
+    </form>
+    <button class="secondaryButton"{{action 'toggleDetail'}}>Cancel</button>
+  </div>
+  {{else}}
+    <button id="bidMove" {{action 'toggleDetail'}}>Bid on this Move</button>
+  {{/if}}
+{{/liquid-spacer}}

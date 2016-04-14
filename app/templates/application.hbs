@@ -23,10 +23,14 @@
       {{#if session.isAuthenticated}}
         <div class="profileNav">
           <div class="yourProfile">
-            {{#link-to 'user-profile' session.uid}} Your Profile{{/link-to}}
-            <img src='{{session.currentUser.profileImageURL}}'/>
+            {{#link-to 'user-profile' session.uid}}
+              Your Profile
+            {{/link-to}}
+            {{#link-to 'user-profile' session.uid}}
+              <img src='{{session.currentUser.profileImageURL}}'/>
+            {{/link-to}}
+            <a class="signOutBtn" href=""{{action 'logout'}}>Sign Out</a>
           </div>
-          <a class="signOutBtn" href=""{{action 'logout'}}>Sign Out</a>
         </div>
         {{else}}
           {{#link-to 'sign-in'}}Sign In{{/link-to}}
