@@ -6,12 +6,20 @@
   @extend %centered;
   @include flexbox($align-items: flex-end);
   @include background-image(linear-gradient(rgba($primaryBlue, 0),
-  rgba($primaryBlue, 0.6)),url("#{$img-path}/vdub-van.jpeg"));
+  rgba($primaryBlue, 0.8)),url("#{$img-path}/vdub-van.jpeg"));
   background-size: cover;
   height: 70vh;
   h1 {
-    margin-bottom: 8%;
-    @include fontFormat(30px, $white, lighter, 1px);
+    width: 800px;
+    margin: 10% auto 3% auto;
+    text-shadow: 2px 2px 2px $primaryBlue;
+    @include fontFormat(40px, $white, lighter, 1px);
+  }
+  h3 {
+    width: 600px;
+    margin: 0 auto 10% auto;
+    text-shadow: 2px 2px 2px $primaryBlue;
+    @include fontFormat(24px, $white, lighter, 1px, $l-height: 40px);
   }
 }
 

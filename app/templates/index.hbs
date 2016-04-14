@@ -1,6 +1,7 @@
 <div class="homepageHeader">
   <div class="container">
-    <h1>Chill ass Portland movers</h1>
+    <h1>Moving kind of sucks, but with Mover we make it easy and affordable.</h1>
+    <h3>Post a move, and our approved movers will bid on a price to get the job done for you.</h3>
   </div>
 </div>
 
@@ -28,12 +29,15 @@
   <div class="homepageBanner">
     <div class="postMove item">
       {{#if session.isAuthenticated}}
+      <p>Need help moving your things?</p>
       {{#link-to 'post-a-move' session.uid}}<h2 class="view">POST A MOVE</h2>{{/link-to}}
       {{else}}
+      <p>Need help moving your things?</p>
       {{#link-to 'sign-in'}}<h2 class="view">POST A MOVE</h2>{{/link-to}}
       {{/if}}
     </div>
     <div class="viewMoves item">
+      <p>Already an approved mover?</p>
       {{#link-to 'open-moves'}}<h2 class="view">VIEW OPEN MOVES</h2>{{/link-to}}
     </div>
   </div>

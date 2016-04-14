@@ -35,10 +35,16 @@
     flex: 1;
     background-size: 100%;
     background-repeat: no-repeat;
-    @include flexbox($justify: center, $align-items: center);
+    @include flexbox($justify: center, $align-items: center, $direction: column);
     transition: all 300ms linear;
+    p {
+      @include fontFormat(25px, $white,$l-spacing: 3px);
+      margin-bottom: 0;
+      text-shadow: 2px 2px 2px $primaryBlue;
+    }
     a {
       @include fontFormat(25px, $white, lighter, 3px);
+      text-shadow: 2px 2px 2px $primaryBlue;
     }
     &:hover {
       transition: all 300ms linear;
@@ -46,12 +52,12 @@
     }
   }
   .postMove {
-    @include background-image(linear-gradient(rgba($primaryBlue, 0.3),
-    rgba($primaryBlue, 0.3)),url("#{$img-path}/empty.jpg"));
+    @include background-image(linear-gradient(rgba($primaryBlue, 0.4),
+    rgba($primaryBlue, 0.4)),url("#{$img-path}/empty.jpg"));
     background-position: bottom;
   }
   .viewMoves {
-    @include background-image(linear-gradient(rgba($primaryBlue, 0.3),
-    rgba($primaryBlue, 0.3)),url("#{$img-path}/mover.jpg"));
+    @include background-image(linear-gradient(rgba($primaryBlue, 0.4),
+    rgba($primaryBlue, 0.4)),url("#{$img-path}/mover.jpg"));
   }
 }
