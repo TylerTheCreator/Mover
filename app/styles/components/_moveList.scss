@@ -7,7 +7,9 @@
     flex: 1;
     text-transform: uppercase;
     @include fontFormat(13px, $weight: bold, $l-spacing: 2px);
-
+    &:last-child{
+      @extend %centered;
+    }
   }
 }
 
@@ -25,6 +27,9 @@
     p {
       flex: 1;
       line-height: 30px;
+      &:last-child {
+        text-align: center;
+      }
     }
   }
 }

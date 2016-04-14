@@ -12,6 +12,9 @@
   .nav {
     @include flexbox($justify: space-around, $align-items: center);
     margin: 2%;
+    @media screen and #{$mobile} {
+      @include flexbox($direction: column);
+    }
     a {
       margin: 15px 0 8px 0;
       padding-bottom: 5px;
@@ -26,15 +29,37 @@
 }
 
 .profileNav {
-  @include flexbox($align-items: center);
-  img {
-    width: 35px;
-    margin-left: 12px;
-    border-radius: 100%;
+  @include flexbox($justify: space-between);
+  position: absolute;
+  top: 1%;
+  right: 2%;
+  width: 250px;
+  a {
+    margin: 0;
   }
-  // a:last-child {
-  //   &:hover {
-  //     border-bottom: none;
-  //   }
-  // }
+  @media screen and #{$tablet}{
+    @include flexbox($direction: column);
+    top: 20px;
+    right: 10px;
+    width: 60px;
+    font-size: 14px;
+  }
+  @media screen and #{$mobile}{
+    position: inherit;
+    @include flexbox($align-items: center, $direction: column);
+  }
+  .yourProfile {
+    @include flexbox($align-items: center);
+    a {
+      @media screen and #{$tablet}{
+        display: none;
+      }
+    }
+    img {
+      width: 35px;
+      margin-left: 12px;
+      margin-right: 12px;
+      border-radius: 100%;
+    }
+  }
 }

@@ -2,6 +2,7 @@
   <div class="container">
     <h2>Details on {{model.user.firstName}} {{model.user.lastName}}'s Move on {{model.date}}</h2>
     <h3>From {{model.fromAddress}}<br> to {{model.toAddress}}</h3>
+    {{#link-to 'open-moves' class="viewAllMoves"}}<i class="fa fa-chevron-left"></i>View all moves{{/link-to}}
   </div>
 </div>
 <div class="container">
@@ -10,22 +11,35 @@
   </div>
   <div class="moveDetails">
     <div class="textContainer">
-      <!-- <div class="moveImage" style="background: url('{{model.image}}') center center no-repeat; background-size: contain;"></div> -->
-      <h2 class='type'>Move Type: {{model.type}}</h2>
-      <h4>List of Items:</h4>
-      <p>{{model.itemsList}}</p>
-      <p class="stairs">Stairs {{stairs-icon model}}</p>
-      <p class="assembly">Assembly {{assembly-icon model}}</p>
-      <h4>Description</h4>
-      <p>{{model.description}}</p>
+      <div>
+        <h2 class='type'>Move Type: {{model.type}}</h2>
+      </div>
+      <div class="">
+        <h4>List of Items:</h4>
+        <p>{{model.itemsList}}</p>
+      </div>
+      <div class="checks">
+        <p class="stairs">Stairs {{stairs-icon model}}</p>
+        <p class="assembly">Assembly {{assembly-icon model}}</p>
+        <p class="fragile">Fragile {{fragile-icon model}}</p>
+      </div>
+      <div class="">
+        <h4>Description</h4>
+        <p>{{model.description}}</p>
+      </div>
     </div>
-    <div class="imageContainer">
-      <img class='moveImage' src="{{model.image}}">
-    </div>
+
+    <div class="imageContainer" style="background: url('{{model.image}}') center center no-repeat; background-size: cover;"></div>
 
   </div>
 
   <h2 class="centeredText">Current Bids On This Move</h2>
+  <div class="bidListHeader">
+    <p>Bid Price</p>
+    <p>Mover's Name</p>
+    <p>Mover's Email</p>
+    <p></p>
+  </div>
   {{#each model.bids as |bid|}}
     {{bid-tile bid=bid destroyBid="destroyBid"}}
   {{/each}}

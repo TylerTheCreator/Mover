@@ -3,6 +3,33 @@
   @include flexbox();
   .textContainer {
     flex:1;
+    > * {
+      padding: .5% 3%;
+      transition: all 300ms ease-in-out;
+      &:hover {
+        transition: all 300ms ease-in-out;
+        background-color: rgba($secondaryBlue, 0.3);
+      }
+    }
+    h2 {
+      text-transform: uppercase;
+    }
+    h4 {
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    p {
+      padding-top: 0;
+      margin-top: 4px;
+    }
+    .checks {
+      @include flexbox();
+      flex: 1;
+      p {
+        margin-right: 5%;
+        padding-top: 2%;
+      }
+    }
   }
   .imageContainer {
     flex: 1;
@@ -12,12 +39,23 @@
   }
 }
 
-// .bidButtonContainer {
-//   margin-top: 5%;
-//   @include flexbox($justify: center);
-// }
+.bidListHeader {
+  @include flexbox($justify: space-between);
+  border-bottom: 2px solid rgba($primaryBlue, 0.5);
+  margin-top: 3%;
+  p {
+    flex: 1;
+    text-transform: uppercase;
+    @include fontFormat(13px, $weight: bold, $l-spacing: 2px);
+
+  }
+}
 
 .bidItem {
-  @include flexbox($justify: space-between);
+  @include flexbox($justify: space-between, $align-items: center);
   border-bottom: 2px solid $primaryBlue;
+  p {
+    flex: 1;
+    // border: 1px solid red;
+  }
 }
