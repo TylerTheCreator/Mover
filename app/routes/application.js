@@ -9,11 +9,11 @@ export default Ember.Route.extend({
   actions: {
        logout: function() {
            this.get('session').close().then(function() {
-               this.transitionTo('application');
+             this.transitionTo('application');
            }.bind(this));
        }
    }
-   
-   
-     
+
+
+
 });

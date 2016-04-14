@@ -102,6 +102,9 @@
       &:first-child{
         margin-right: 5px;
       }
+      @media screen and #{$mobile} {
+        width: 49%;
+      }
     }
   }
   button {
@@ -119,6 +122,16 @@
   }
   hr {
     border: 1px solid $white;
+  }
+  .checkboxes {
+    @media screen and #{$mobile} {
+      @include flexbox($direction: column);
+    }
+    .form-group-check {
+      @media screen and #{$mobile} {
+        margin-bottom: 10px;
+      }
+    }
   }
 }
 
