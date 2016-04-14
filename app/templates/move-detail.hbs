@@ -27,6 +27,12 @@
     <!-- Get whatever tyler is coding for this -->
   </div>
   <h2 class="centeredText">Current Bids On This Move</h2>
+  <div class="bidListHeader">
+    <p>Bid Price</p>
+    <p>Mover's Name</p>
+    <p>Mover's Email</p>
+    <p></p>
+  </div>
   {{#each model.bids as |bid|}}
     {{bid-tile bid=bid destroyBid="destroyBid"}}
   {{/each}}
