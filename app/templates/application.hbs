@@ -21,19 +21,15 @@
 
       {{#link-to 'mover-sign-up'}}<span>Become a Mover</span>{{/link-to}}
       {{#if session.isAuthenticated}}
-          <a href=""{{action 'logout'}}>Sign Out</a>
-          <div class="profileNav">
+        <div class="profileNav">
+          <div class="yourProfile">
             {{#link-to 'user-profile' session.uid}} Your Profile{{/link-to}}
             <img src='{{session.currentUser.profileImageURL}}'/>
           </div>
-             <!-- <div class='panel panel-default'>
-              <div class='panel-heading'>{{session.currentUser.email}}</div>
-              <div class='panel-body'>
-                <img src='{{session.currentUser.profileImageURL}}' />
-              </div>
-              </div> -->
+          <a class="signOutBtn" href=""{{action 'logout'}}>Sign Out</a>
+        </div>
         {{else}}
-        {{#link-to 'sign-in'}}<p>Sign In</p>{{/link-to}}
+          {{#link-to 'sign-in'}}<p>Sign In</p>{{/link-to}}
         {{/if}}
       </div>
     </div>

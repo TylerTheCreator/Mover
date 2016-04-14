@@ -1,12 +1,15 @@
 .contentWrapper {
-  margin-top: 5%;
-  h2 {
-    @extend %centered;
+  .container {
+    margin: 0;
+    padding: 0;
   }
 }
 
 .how-it-works {
-  @include flexbox ($justify: space-between);
+  @include flexbox ();
+  flex: 1;
+  height: 40vh;
+  margin: 0;
   .number {
     @include flexbox ($justify: center, $align-items: center);
     background-color: $primaryBlue;
@@ -17,11 +20,18 @@
     margin: 0 auto;
   }
   .item {
-    @extend %centered;
-    background-color: rgba($primaryBlue, 0.2);
     flex: 1;
-    margin: 0px 2%;
-    padding: 3%;
+    border: 2px solid $primaryBlue;
+    padding: 8% 3%;
+    @extend %centered;
+    background-color: rgba($secondaryBlue, 0.1);
+    h3 {
+      @include fontFormat(24px, $l-height: 35px);
+      text-shadow: 1px 1px 1px $white;
+    }
+    p {
+      @include fontFormat(22px, $l-height: 35px);
+    }
   }
 }
 
@@ -29,16 +39,21 @@
 
 .homepageBanner {
   @include flexbox();
-  height: 25vh;
-  margin-top: 7%;
+  height: 320px;
   .item {
     flex: 1;
     background-size: 100%;
     background-repeat: no-repeat;
-    @include flexbox($justify: center, $align-items: center);
+    @include flexbox($justify: center, $align-items: center, $direction: column);
     transition: all 300ms linear;
+    p {
+      @include fontFormat(25px, $white,$l-spacing: 3px);
+      margin-bottom: 0;
+      text-shadow: 2px 2px 2px $primaryBlue;
+    }
     a {
       @include fontFormat(25px, $white, lighter, 3px);
+      text-shadow: 2px 2px 2px $primaryBlue;
     }
     &:hover {
       transition: all 300ms linear;
@@ -46,12 +61,12 @@
     }
   }
   .postMove {
-    @include background-image(linear-gradient(rgba($primaryBlue, 0.3),
-    rgba($primaryBlue, 0.3)),url("#{$img-path}/empty.jpg"));
+    @include background-image(linear-gradient(rgba($primaryBlue, 0.4),
+    rgba($primaryBlue, 0.4)),url("#{$img-path}/empty.jpg"));
     background-position: bottom;
   }
   .viewMoves {
-    @include background-image(linear-gradient(rgba($primaryBlue, 0.3),
-    rgba($primaryBlue, 0.3)),url("#{$img-path}/mover.jpg"));
+    @include background-image(linear-gradient(rgba($primaryBlue, 0.4),
+    rgba($primaryBlue, 0.4)),url("#{$img-path}/mover.jpg"));
   }
 }
