@@ -1,5 +1,27 @@
 {{#if session.isAuthenticated}}
-  {{#each model.moves as |move|}}
-    {{move-tile move=move}}
-  {{/each}}
+
+  <div class="profileHeader">
+    <h1>Your Profile</h1>
+    <img class="profileImage" src='{{session.currentUser.profileImageURL}}' alt='avatar img'>
+  </div>
+  <div class="profileContent">
+
+  </div>
+  Change your avatar on <a target="_blank" href="https://en.gravatar.com">Gravatar.</a>
+  <br>
+    Email-Address: {{session.currentUser.email}}
+  <br>
 {{/if}}
+
+{{user-profile-info user=model}}
+
+<br><br><hr>
+<div class="userMoveList">
+  {{#if session.isAuthenticated}}
+  {{#each model.moves as |move|}}
+  {{profile-move-tile move=move deleteMove='deleteMove' model=user}}
+  {{edit-move editMove="editMove" model=user move=move}}
+  {{/each}}
+  {{/if}}
+
+</div>

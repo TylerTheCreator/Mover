@@ -1,6 +1,9 @@
 .moveDetails {
   margin: 5% auto;
   @include flexbox();
+  @media screen and #{$mobile} {
+    flex-direction: column;
+  }
   .textContainer {
     flex:1;
     > * {
@@ -36,6 +39,9 @@
     .moveImage {
       max-width: 100%;
     }
+    @media screen and #{$mobile} {
+      height: 35vh;
+    }
   }
 }
 
@@ -43,6 +49,9 @@
   @include flexbox($justify: space-between);
   border-bottom: 2px solid rgba($primaryBlue, 0.5);
   margin-top: 3%;
+  // @media screen and #{$mobile} {
+  //   display: none;
+  // }
   p {
     flex: 1;
     text-transform: uppercase;
@@ -58,4 +67,20 @@
     flex: 1;
     // border: 1px solid red;
   }
+  .this {
+    display: none;
+  }
+}
+.bidEmail {
+  @media screen and #{$mobile} {
+    display: none;
+  }
+}
+
+.noCurrentBids {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 16px;
+  margin-top: 30px;
 }
