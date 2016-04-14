@@ -5,6 +5,12 @@ export default Ember.Route.extend({
    return this.store.findRecord('move', params.move_id);
  },
  actions: {
+  //  isNoImage(params) {
+  //    var move = params.move;
+  //    if (move.get('image') === "") {
+  //      return true;
+  //    }
+  //  },
    saveBid(params){
      console.log(params);
      var newBid = this.store.createRecord('bid', params);

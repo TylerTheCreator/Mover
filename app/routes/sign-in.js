@@ -18,6 +18,8 @@ export default Ember.Route.extend({
              email: email,
              password: password,
         }).then(function() {
+            // this.set('userEmail', "");
+            // this.set('userPassword', "");
             this.transitionTo('post-a-move', this.get('session.uid'));
         }.bind(this));
     },

@@ -5,4 +5,7 @@
   @extend %centered;
   border-radius: 5px;
   @include fontFormat(18px, $l-spacing: 1px);
+  @media screen and #{$tablet}{
+    margin-bottom: 50px;
+  }
 }

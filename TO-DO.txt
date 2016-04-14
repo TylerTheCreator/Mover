@@ -1,5 +1,6 @@
 FUNCTIONALITY:
 
+- get profile page displaying moves
 - Fix Hello ____ in application.hbs to display correct name.
 - Add move-tiles to user profile and ability to edit / delete moves
 - Add "edit profile" to user profile -- ability to add image.
@@ -10,3 +11,6 @@ STYLES:
 - about page
 - post-a-move page
 - user profile
+- center button on move detail page
+- become a mover form has two phone number fields
+- put a link to view open moves somewhere else
