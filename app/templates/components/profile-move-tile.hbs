@@ -1,11 +1,10 @@
-<div class="userMoveItem">
-  {{#link-to 'move-detail' move.id}}
-  <div class="profileMoveItem">
-    <p>{{move.date}}</p>
-    <p>From: {{move.fromAddress}}<br>
-      To: {{move.toAddress}}</p>
-      <p class="bidCount">{{totalBids}}</p>
-  </div>{{/link-to}}
-  <button{{action 'deleteMove' move}}>Delete this Move</button>
 
-</div>
+  {{#link-to 'move-detail' move.id}}
+    <div class="profileMoveItem">
+      <p>{{move.date}}</p>
+      <p>From: {{move.fromAddress}}<br>
+        To: {{move.toAddress}}</p>
+      <p class="bidCount">{{totalBids}}</p>
+    </div>
+  {{/link-to}}
+  <!-- <button{{action 'deleteMove' move}}>Delete this Move</button> -->

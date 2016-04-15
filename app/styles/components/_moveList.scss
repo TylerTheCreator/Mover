@@ -38,4 +38,22 @@
       }
     }
   }
+  .userMoveItem {
+    border: 1px solid red;
+    border-bottom: 3px solid rgba($primaryBlue, 0.5);
+    padding: 0px 2%;
+    @include flexbox($justify: space-between, $align-items: center);
+    transition: all 300ms ease-in-out;
+    &:hover {
+      transition: all 300ms ease-in-out;
+      background-color: rgba($secondaryBlue, 0.3);
+      cursor: pointer;
+    }
+    .profileMoveItem {
+      border: 1px solid cyan;
+    }
+    button {
+      align-self: center;
+    }
+  }
 }

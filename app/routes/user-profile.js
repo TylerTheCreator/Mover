@@ -6,9 +6,11 @@ export default Ember.Route.extend({
   },
   actions: {
     deleteMove(move) {
-      console.log(move);
-      move.destroyRecord();
-      this.transitionTo('user-profile');
+      if(confirm("Are you sure you want to delete this move?")) {
+        console.log(move);
+        move.destroyRecord();
+        this.transitionTo('user-profile');
+      }
     },
     editMove(move, formInputs) {
       Object.keys(formInputs).forEach(function(key) {
