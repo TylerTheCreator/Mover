@@ -2,10 +2,16 @@
   margin: 2% 0;
   @include flexbox($direction: column);
   width: 100%;
+  label {
+    margin: 10px 0;
+  }
   form {
     @include flexbox($justify: center, $direction: column, $align-items: center);
-    width: 50%;
+    width: 500px;
     margin: 0 auto;
+    @media screen and #{$mobile}{
+      width: 95%;
+    }
     input {
       width: 100%;
       height: 50px;
@@ -13,6 +19,7 @@
       @extend %bodyFont;
       letter-spacing: 1px;
       padding-left: 2%;
+      border: 1px solid black;
     }
     button {
       margin: 2% auto 2% auto;
@@ -145,10 +152,16 @@
   .forms {
     width: 500px;
     background-color: rgba($white, 0.7);
-    padding: 70px 40px;
+    padding: 30px 40px 70px 40px;
     @include flexbox($justify: space-between, $direction: column);
     height: 600px;
     border-radius: 5px;
+    p {
+      @extend %centered;
+      @include fontFormat(24px, $primaryBlue, bold, $l-spacing: 2px);
+      margin: 0;
+      text-shadow: 1px 1px 1px $white;
+    }
     @media screen and #{$mobile}{
       width: 95%;
     }
@@ -164,5 +177,23 @@
   button {
     margin: 2% auto 2% auto;
     display: block;
+  }
+  h1 {
+    @extend %centered;
+    @include fontFormat(42px, $white, $l-spacing: 3px, $l-height: 60px);
+    width: 90%;
+    text-shadow: 2px 2px 2px $primaryBlue;
+    @media screen and #{$mobile}{
+      margin-top: -200px;
+    }
+  }
+  h2 {
+    @extend %centered;
+    @include fontFormat(32px, $white, $l-spacing: 3px, $l-height: 60px);
+    width: 70%;
+    text-shadow: 2px 2px 2px $primaryBlue;
+    @media screen and #{$mobile}{
+      @include fontFormat(32px, $white, $l-spacing: 3px, $l-height: 40px);
+    }
   }
 }

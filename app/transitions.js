@@ -42,6 +42,12 @@ export default function(){
     this.reverse('crossFade')
   );
   this.transition(
+    this.fromRoute('move-detail', {path: '/move-detail/:move_id'}),
+    this.toRoute(['post-a-move', 'about', 'sign-in', 'user-profile', 'open-moves', 'mover-sign-up']),
+    this.use('crossFade'),
+    this.reverse('crossFade')
+  );
+  this.transition(
     this.fromRoute('open-moves'),
     this.toRoute('move-detail'),
     this.use('toLeft'),

@@ -7,5 +7,6 @@
   @include fontFormat(18px, $l-spacing: 1px);
   @media screen and #{$tablet}{
     margin-bottom: 50px;
+    width: 95%;
   }
 }

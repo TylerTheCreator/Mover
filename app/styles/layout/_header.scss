@@ -71,6 +71,7 @@
   @include flexbox($align-items: center);
   @extend %centered;
   color: $white;
+  margin-bottom: 2%;
   h2 {
     @include fontFormat(45px, $white, $l-spacing: 3px);
     text-shadow: 1px 1px 1px $primaryBlue;
@@ -82,23 +83,6 @@
     @include fontFormat(24px, $white, lighter, $l-spacing: 3px);
     @media screen and #{$mobile} {
       @include fontFormat(16px, $white, lighter, $l-spacing: 3px);
-    }
-  }
-  .viewAllMoves {
-    color: $white;
-    position: relative;
-    left: -550px;
-    top: 85px;
-    .fa {
-      margin-right: 15px;
-      font-size: 14px;
-      transition: all 300ms ease-in-out;
-    }
-    &:hover {
-      .fa {
-        transition: all 300ms ease-in-out;
-        margin-right: 25px;
-      }
     }
   }
 }
@@ -122,13 +106,6 @@
   width: 150px;
   border-radius: 50%;
 }
-
-// &:hover {
-//   transition: all 300ms ease-in-out;
-//   .fa {
-//     margin-right: 25px;
-//   }
-// }
 
 .aboutHeader {
   padding: 3%;
