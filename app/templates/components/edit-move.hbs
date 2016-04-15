@@ -51,8 +51,11 @@
 
 
       <div class="form-group">
-        <label for="date">Date of Your Move<i class="fa fa-asterisk"></i></label>
-        {{input value=move.date id="date" required="required"}}
+        <label>
+          Date of Move:
+          <br>
+          {{pikaday-input value=date id="date" required="required" format="DD/MM/YYYY" placeholder="MM/DD/YYYY"}}
+        </label>
       </div>
       <div class="userCheckboxContainer">
         <div class="userCheckboxes">
