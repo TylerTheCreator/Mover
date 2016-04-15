@@ -230,3 +230,50 @@
     }
   }
 }
+
+// MailChimp forms
+
+.ember-chimp {
+  input {
+    width: 400px;
+    height: 50px;
+    font-size: 16px;
+    @extend %bodyFont;
+    letter-spacing: 1px;
+    padding-left: 5%;
+    margin-bottom: 5%;
+  }
+  &.idle, &.loading {
+    .chimp-says {
+      display: none;
+    }
+  }
+
+  &.success {
+    .chimp-says {
+      margin: 5% 0;
+      width: 500px;
+      line-height: 30px;
+      letter-spacing: 1px;
+      font-size: 18px;
+      color: palegreen;
+      @extend %centered;
+    }
+    input {
+      display: none;
+    }
+    button {
+      display: none;
+    }
+  }
+
+  &.error {
+    .chimp-says {
+      margin: 3% 0 5% 0;
+      color: tomato;
+      @extend %centered;
+      letter-spacing: 1px;
+      font-size: 17px;
+    }
+  }
+}
