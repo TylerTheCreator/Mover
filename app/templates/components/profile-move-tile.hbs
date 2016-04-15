@@ -2,8 +2,10 @@
   {{#link-to 'move-detail' move.id}}
     <div class="profileMoveItem">
       <p>{{move.date}}</p>
-      <p>From: {{move.fromAddress}}<br>
-        To: {{move.toAddress}}</p>
+      <div class="moveAddresses">
+        <p>From: {{move.fromAddress}}<br>
+          To: {{move.toAddress}}</p>
+      </div>
       <p class="bidCount">{{totalBids}}</p>
     </div>
   {{/link-to}}

@@ -13,12 +13,19 @@
 
     <div class="moveList">
       <h2>Your Moves</h2>
+      <div class="moveListHeader">
+        <p>Date</p>
+        <p>Locations</p>
+        <p class="buttons"></p>
+      </div>
       {{#if session.isAuthenticated}}
       <div class="userMoveItem">
         {{#each model.moves as |move|}}
         {{profile-move-tile move=move deleteMove='deleteMove' model=user}}
-        {{edit-move editMove="editMove" model=user move=move}}
+        <div class="profileMoveButtons">
           <button{{action 'deleteMove' move}}>Delete this Move</button>
+          {{edit-move editMove="editMove" model=user move=move}}
+        </div>
       {{/each}}
     </div>
       {{/if}}

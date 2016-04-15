@@ -89,7 +89,7 @@
 
 .profileHeader {
   height: 35vh;
-  min-height: 320px;
+  min-height: 400px;
   padding: 3%;
   @include background-image(linear-gradient(rgba($primaryBlue, 0.7),
   rgba($primaryBlue, 0.7)),url("#{$img-path}/portland4.png"));

@@ -39,7 +39,6 @@
     }
   }
   .userMoveItem {
-    border: 1px solid red;
     border-bottom: 3px solid rgba($primaryBlue, 0.5);
     padding: 0px 2%;
     @include flexbox($justify: space-between, $align-items: center);
@@ -49,11 +48,24 @@
       background-color: rgba($secondaryBlue, 0.3);
       cursor: pointer;
     }
-    .profileMoveItem {
-      border: 1px solid cyan;
+    > .ember-view {
+      flex: 2;
     }
-    button {
-      align-self: center;
+    .profileMoveItem {
+      flex: 1;
+      @include flexbox($justify: space-between);
+      display: flex;
+      &:last-child {
+        flex: 2;
+      }
+
+    }
+    .profileMoveButtons {
+      @include flexbox($justify: space-between, $align-items: center, $direction: column);
+      button {
+        margin: 1%;
+        width: 200px;
+      }
     }
   }
 }
