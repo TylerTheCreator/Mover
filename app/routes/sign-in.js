@@ -51,8 +51,8 @@ export default Ember.Route.extend({
            });
              user.save()
              .then(function(){
-               _this.transitionTo('/');
-           });
+               _this.transitionTo('user-profile', user.id);
+             });
            });
          }
        });
