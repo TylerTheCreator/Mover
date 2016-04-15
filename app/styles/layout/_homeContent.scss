@@ -9,6 +9,7 @@
   @include flexbox ();
   flex: 1;
   height: 40vh;
+  min-height: 440px;
   margin: 0;
   @media screen and #{$mobile} {
     @include flexbox ($direction: column);
@@ -26,7 +27,7 @@
   .item {
     flex: 1;
     border: 2px solid $primaryBlue;
-    padding: 8% 3%;
+    padding: 7% 3%;
     @extend %centered;
     background-color: rgba($secondaryBlue, 0.1);
     h3 {

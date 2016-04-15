@@ -9,6 +9,7 @@
   rgba($primaryBlue, 0.8)),url("#{$img-path}/vdub-van.jpeg"));
   background-size: cover;
   height: 70vh;
+  min-height: 570px;
   @media screen and #{$mobile} {
     @include background-image(linear-gradient(rgba($primaryBlue, 0.4),
     rgba($primaryBlue, 0.8)),url("#{$img-path}/vdub-van.jpeg"));
