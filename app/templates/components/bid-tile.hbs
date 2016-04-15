@@ -1,6 +1,6 @@
 <div class="bidItem">
-  <p>${{bid.bid}}.00</p>
+  <p>${{bid.bid}}/hr</p>
   <p>{{bid.name}}</p>
-  <p>{{bid.email}}</p>
-  <p><button {{action 'delete' bid}}>Delete This Bid</button></p>
+  <p class="bidEmail">{{bid.email}}</p>
+  <p><button class="deleteBidButton" {{action 'delete' bid}}>Delete <span class="this">This Bid</span></button></p>
 </div>

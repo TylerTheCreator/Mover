@@ -49,9 +49,15 @@
     h1 {
       @include fontFormat(60px, $white, $l-spacing: 3px);
       text-shadow: 1px 1px 1px $primaryBlue;
+      @media screen and #{$mobile} {
+        @include fontFormat(35px);
+      }
     }
     h3 {
       @include fontFormat(24px, $white, lighter, $l-spacing: 3px);
+      @media screen and #{$mobile} {
+        @include fontFormat(15px);
+      }
     }
   }
 }
@@ -69,10 +75,36 @@
   h2 {
     @include fontFormat(45px, $white, $l-spacing: 3px);
     text-shadow: 1px 1px 1px $primaryBlue;
+    @media screen and #{$mobile} {
+      @include fontFormat(23px, $white, $l-spacing: 3px);
+    }
   }
   h3 {
     @include fontFormat(24px, $white, lighter, $l-spacing: 3px);
+    @media screen and #{$mobile} {
+      @include fontFormat(16px, $white, lighter, $l-spacing: 3px);
+    }
   }
+}
+
+.profileHeader {
+  height: 35vh;
+  min-height: 320px;
+  padding: 3%;
+  @include background-image(linear-gradient(rgba($primaryBlue, 0.7),
+  rgba($primaryBlue, 0.7)),url("#{$img-path}/portland4.png"));
+  background-position: center;
+  background-size: cover;
+  @include flexbox($align-items: center, $direction: column);
+  @extend %centered;
+  color: $white;
+  margin-bottom: 5%;
+}
+
+.profileImage {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
 }
 
 .aboutHeader {
