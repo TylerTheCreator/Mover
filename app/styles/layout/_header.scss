@@ -91,16 +91,21 @@
 
 .profileHeader {
   height: 35vh;
-  min-height: 320px;
+  min-height: 400px;
   padding: 3%;
   @include background-image(linear-gradient(rgba($primaryBlue, 0.7),
   rgba($primaryBlue, 0.7)),url("#{$img-path}/portland4.png"));
   background-position: center;
   background-size: cover;
-  @include flexbox($align-items: center, $direction: column);
+  @include flexbox($justify: space-around, $align-items: center, $direction: column);
   @extend %centered;
   color: $white;
   margin-bottom: 5%;
+  .changeAvatar {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
 }
 
 .profileImage {

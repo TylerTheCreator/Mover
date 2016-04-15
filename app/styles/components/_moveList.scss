@@ -38,4 +38,42 @@
       }
     }
   }
+  .userMoveItem {
+    border-bottom: 3px solid rgba($primaryBlue, 0.5);
+    padding: 0px 2%;
+    @include flexbox($justify: space-between, $align-items: center);
+    transition: all 300ms ease-in-out;
+    &:hover {
+      transition: all 300ms ease-in-out;
+      background-color: rgba($secondaryBlue, 0.3);
+      cursor: pointer;
+    }
+    > .ember-view {
+      flex: 2;
+    }
+    .profileMoveItem {
+      flex: 1;
+      @include flexbox($justify: space-between);
+      display: flex;
+      &:last-child {
+        flex: 2;
+      }
+
+    }
+    .profileMoveButtons {
+      @include flexbox($justify: space-between, $align-items: center, $direction: column);
+      button {
+        margin: 1%;
+        width: 200px;
+      }
+    }
+  }
+}
+
+.moveListHead {
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+.profileActionButtons {
+  text-align: center;
 }

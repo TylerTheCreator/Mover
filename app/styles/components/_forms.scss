@@ -32,6 +32,39 @@
   }
 }
 
+.editMove {
+  margin: 2% 0;
+  @include flexbox($direction: column);
+  width: 100%;
+  label {
+    margin: 15px 0;
+  }
+  form {
+    @include flexbox($justify: center, $direction: column);
+    width: 500px;
+    margin: 0 auto;
+    @media screen and #{$mobile}{
+      width: 95%;
+    }
+    input {
+      width: 100%;
+      margin-bottom: 10px;
+      height: 30px;
+      font-size: 16px;
+      @extend %bodyFont;
+      letter-spacing: 1px;
+      padding-left: 2%;
+      border: 1px solid black;
+    }
+    .userCheckboxContainer {
+      .userCheckboxes {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
 .signInContainer {
   @include background-image(linear-gradient(rgba($primaryBlue, 0.6),
   rgba($primaryBlue, 0.6)),url("#{$img-path}/house-car.jpg"));

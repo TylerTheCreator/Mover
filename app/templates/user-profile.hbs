@@ -1,27 +1,40 @@
 {{#if session.isAuthenticated}}
 
   <div class="profileHeader">
-    <h1>Your Profile</h1>
+    {{user-profile-info user=model}}
     <img class="profileImage" src='{{session.currentUser.profileImageURL}}' alt='avatar img'>
+    <p class='changeAvatar'> {{session.currentUser.email}}</p>
+    <p class="changeAvatar">Change your avatar on <a class="createLink" target="_blank" href="https://en.gravatar.com">Gravatar.</a></p>
   </div>
-  <div class="profileContent">
 
+  {{edit-profile}}
+
+  <div class="container">
+    <div class="profileActionButtons">
+      {{#link-to 'post-a-move' session.uid}}<button>Post a New Move</button>{{/link-to}}
+      {{#link-to 'open-moves'}}<button>View All Open Moves</button>{{/link-to}}
+    </div>
+
+    <div class="moveList">
+      <h2 class="moveListHead">Your Moves</h2>
+      <div class="moveListHeader">
+        <p>Date</p>
+        <p>Locations</p>
+        <p class="buttons"></p>
+      </div>
+      {{#if session.isAuthenticated}}
+      <div class="userMoveItem">
+        {{#each model.moves as |move|}}
+        {{profile-move-tile move=move deleteMove='deleteMove' model=user}}
+        <div class="profileMoveButtons">
+          <button{{action 'deleteMove' move}}>Delete this Move</button>
+          {{edit-move editMove="editMove" model=user move=move}}
+        </div>
+      {{/each}}
+    </div>
+      {{/if}}
+    </div>
   </div>
-  Change your avatar on <a target="_blank" href="https://en.gravatar.com">Gravatar.</a>
-  <br>
-    Email-Address: {{session.currentUser.email}}
-  <br>
+
+
 {{/if}}
-
-{{user-profile-info user=model}}
-
-<br><br><hr>
-<div class="userMoveList">
-  {{#if session.isAuthenticated}}
-  {{#each model.moves as |move|}}
-  {{profile-move-tile move=move deleteMove='deleteMove' model=user}}
-  {{edit-move editMove="editMove" model=user move=move}}
-  {{/each}}
-  {{/if}}
-
-</div>
