@@ -10,6 +10,10 @@
   {{edit-profile}}
 
   <div class="container">
+    <div class="profileActionButtons">
+      {{#link-to 'post-a-move' session.uid}}<button>Post a New Move</button>{{/link-to}}
+      {{#link-to 'open-moves'}}<button>View All Open Moves</button>{{/link-to}}
+    </div>
 
     <div class="moveList">
       <h2>Your Moves</h2>
