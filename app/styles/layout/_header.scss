@@ -44,8 +44,8 @@
   @include background-image(linear-gradient(rgba($primaryBlue, 0),
   rgba($primaryBlue, 0.6)),url("#{$img-path}/mover.jpg"));
   background-size: cover;
-  // background-position: bottom;
   height: 35vh;
+  min-height: 430px;
   .headerText {
     h1 {
       @include fontFormat(60px, $white, $l-spacing: 3px);
@@ -65,6 +65,7 @@
 
 .moveDetailHeader {
   height: 35vh;
+  min-height: 430px;
   @include background-image(linear-gradient(rgba($primaryBlue, 0.8),
   rgba($primaryBlue, 0.8)),url("#{$img-path}/city.jpeg"));
   background-position: bottom;

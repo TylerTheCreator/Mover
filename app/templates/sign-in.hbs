@@ -8,32 +8,13 @@
     <hr>
     <div class="signUp">
       <p>Don't have an account yet?</p>
-      {{input type="text" value=firstName placeholder="First Name"}}<br>
-      {{input type="text" value=lastName placeholder="Last Name"}}<br>
-      {{input type="text" value=email placeholder="Email"}}<br>
-      {{input type="password" value=password placeholder="Password"}}<br>
-      <button {{action "signUp"}}> Sign Up </button>
+      <form {{action "signUp" on="submit"}}>
+        {{input type="text" value=firstName placeholder="First Name" required="required"}}<br>
+        {{input type="text" value=lastName placeholder="Last Name" required="required"}}<br>
+        {{input type="text" value=email placeholder="Email" required="required"}}<br>
+        {{input type="password" value=password placeholder="Password" required="required"}}<br>
+        <button type="submit"> Sign Up </button>
+      </form>
     </div>
   </div>
 </div>
-
-<!-- <div class="signInContainer">
-  <div class="forms">
-    {{#if userCreated}}
-    <div class="signUp">
-      {{input type="text" value=firstName placeholder="First Name"}}<br>
-      {{input type="text" value=lastName placeholder="Last Name"}}<br>
-      {{input type="text" value=email placeholder="Email"}}<br>
-      {{input type="password" value=password placeholder="Password"}}<br>
-      <button {{action "signUp"}}> Sign Up </button>
-    </div>
-    {{else}}
-    <div class="login">
-      {{input type="text" value=userEmail placeholder="Email"}}<br>
-      {{input type="password" value=userPassword placeholder="Password"}}<br>
-      <button {{action "login"}}> Login </button>
-      <button {{action 'toggleDetail'}}>Don't have an account? Sign Up for Mover</button>
-    </div>
-    {{/if}}
-  </div>
-</div> -->
