@@ -1,7 +1,14 @@
 # Mover
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Mover was built as a moving application for people with the inability based on time, or resources to move their possessions to where a "Mover" wants to relocate.
+
+## Contributors
+* Brooke Hurford
+* Taylor Pokoj
+* Timothy Durward
+* Matthew Newell
+* Tyler Finley
+* Andrew Cho
 
 ## Prerequisites
 
@@ -15,7 +22,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone <https://github.com/TylerTheCreator/Mover.git>`
 * change into the new directory
 * `npm install`
 * `bower install`
@@ -23,7 +30,7 @@ You will need the following things properly installed on your computer.
 ## Running / Development
 
 * `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+* Visit Mover at [http://localhost:4200](http://localhost:4200), or see a live version at [https://movr.herokuapp.com/](https://movr.herokuapp.com/).
 
 ### Code Generators
 
@@ -38,16 +45,3 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
